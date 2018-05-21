@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listaKsiazek.TabelaKsiazek">
+   <children>
+      <TableView fx:id="tabelaKsiazka" layoutX="52.0" layoutY="38.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="idTab" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tytulTab" prefWidth="75.0" text="Tytuł" />
+            <TableColumn fx:id="autorTab" prefWidth="75.0" text="Autor" />
+            <TableColumn fx:id="wydawcaTab" prefWidth="75.0" text="Wydawca" />
+            <TableColumn fx:id="dostepnaTab" prefWidth="75.0" text="Dostępna" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>
