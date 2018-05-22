@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
-public class nowaksiazka implements Initializable {
+public class Nowaksiazka implements Initializable {
     @FXML
     private AnchorPane ksiazka_main;
     @FXML
@@ -40,16 +40,7 @@ public class nowaksiazka implements Initializable {
     }
 
     private void sprawdzanie() {
-        String qu = "SELECT tytul FROM KSIAZKA";
-        ResultSet rs = DatabaseControll.execQuery(qu);
-        try {
-            while (rs.next()) {
-                String tytul_pob = rs.getString("tytul");
-                System.out.println(tytul_pob);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
     }
 
 

@@ -34,7 +34,7 @@ public class DatabaseControll {
             if (tabele.next()) {
                 System.out.println("Tabela KSIAZKA już istnieje. Gotowy do pracy.");
             } else {
-                boolean b = stmt.execute(String.format("CREATE TABLE KSIAZKA (id VARCHAR (200) PRIMARY KEY,tytul VARCHAR (200),autor VARCHAR (200),wydawca VARCHAR (200),dostepnosc boolean default true)"));
+                boolean b = stmt.execute("CREATE TABLE KSIAZKA (id VARCHAR (200) PRIMARY KEY,tytul VARCHAR (200),autor VARCHAR (200),wydawca VARCHAR (200),dostepnosc boolean default true)");
             }
 
         } catch (SQLException e) {
@@ -42,7 +42,25 @@ public class DatabaseControll {
         }
     }
 
-    public ResultSet execQuery(String query) {
+    void tworzenieTabeliUzytkownik() {
+        try {
+            stmt = conn.createStatement();
+
+            DatabaseMetaData dbm = conn.getMetaData();
+            ResultSet tabeleuzytkownik = dbm.getTables(null, null, "KSIAZKA", null);
+
+            if (tabeleuzytkownik.next()) {
+                System.out.println("Tabela KSIAZKA już istnieje. Gotowy do pracy.");
+            } else {
+                boolean b = stmt.execute("CREATE TABLE UZYTKOWNIK (id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),imie VARCHAR (200),nazwisko VARCHAR (200),email VARCHAR (200),telefon NUMBER(200), rola NUMBER(200) DEFAULT 1)");
+            }
+
+        } catch (SQLException e) {
+            System.err.println(e.getMessage() + " --- setupDatabase");
+        }
+    }
+
+    public static ResultSet execQuery(String query) {
         ResultSet result;
         try {
             stmt = conn.createStatement();
