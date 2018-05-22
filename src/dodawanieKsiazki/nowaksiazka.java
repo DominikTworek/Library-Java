@@ -35,7 +35,7 @@ public class Nowaksiazka implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        DatabaseControll = new DatabaseControll();
+        DatabaseControll = DatabaseControll.getInstance();
     }
 
 

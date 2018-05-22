@@ -4,16 +4,23 @@ import javax.swing.*;
 import java.sql.*;
 
 public class DatabaseControll {
-    private static DatabaseControll handler;
+    private static DatabaseControll handler = null;
 
     private static final String DB_URL = "jdbc:derby:bazadanych;create=true";
     private static Connection conn = null;
     private static Statement stmt = null;
 
-    public DatabaseControll() {
+    private DatabaseControll() {
         polaczenie();
         tworzenieTabeliKsiazka();
         tworzenieTabeliUzytkownik();
+    }
+
+    public static DatabaseControll getInstance(){
+        if(handler == null) {
+            handler = new DatabaseControll();
+        }
+        return handler;
     }
 
     void polaczenie() {

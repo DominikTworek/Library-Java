@@ -53,7 +53,7 @@ public class TabelaUzytkownikow implements Initializable {
     }
 
     private void czytanieUzytkownikow() {
-        DatabaseControll odczyt = new DatabaseControll();
+        DatabaseControll odczyt = DatabaseControll.getInstance();
         String qu = "SELECT * FROM UZYTKOWNIK";
         ResultSet rs = odczyt.execQuery(qu);
         try {
@@ -117,9 +117,7 @@ public class TabelaUzytkownikow implements Initializable {
             return nazwisko.get();
         }
 
-        public String getLogin() {
-            return login.get();
-        }
+        public String getLogin() { return login.get(); }
 
         public String getHaslo() {
             return haslo.get();

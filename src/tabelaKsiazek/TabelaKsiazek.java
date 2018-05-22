@@ -41,7 +41,7 @@ public class TabelaKsiazek implements Initializable {
     }
 
     private void czytanieKsiazek() {
-        DatabaseControll odczyt = new DatabaseControll();
+        DatabaseControll odczyt = DatabaseControll.getInstance();
         String qu = "SELECT * FROM KSIAZKA";
         ResultSet rs = odczyt.execQuery(qu);
         try {
