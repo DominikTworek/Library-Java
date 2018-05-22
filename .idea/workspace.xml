@@ -75,54 +75,23 @@
       <file leaf-file-name="DatabaseControll.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bazadanych/DatabaseControll.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+            <state relative-caret-position="-153">
+              <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
               <folding>
-                <marker date="1526928214626" expanded="true" signature="1080:1225" ph="CREATE TABLE... KSIAZKA" />
-                <marker date="1526928214626" expanded="true" signature="1796:2014" ph="CREATE TABLE... UZYTKOWNIK" />
+                <marker date="1526995704863" expanded="true" signature="1117:1262" ph="CREATE TABLE... KSIAZKA" />
+                <marker date="1526995704863" expanded="true" signature="1709:1730" ph="DROP TABLE U... " />
+                <marker date="1526995704863" expanded="true" signature="1885:2050" ph="CREATE TABLE... UZYTKOWNIK" />
+                <marker date="1526995704863" expanded="true" signature="1885:2051" ph="CREATE TABLE... UZYTKOWNIK" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rejestracja.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rejestracja/rejestracja.css">
+      <file leaf-file-name="LoaderNowyUzytkownik.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rejestracja/LoaderNowyUzytkownik.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rejestracja.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rejestracja/rejestracja.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="42" column="61" lean-forward="false" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Nowaksiazka.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Nowaksiazka.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="59" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NowyUzytkownik.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="147">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,16 +99,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nowaksiazka.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.fxml">
+      <file leaf-file-name="NowyUzytkownik.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="21">
+              <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1172#1173#0" expanded="true" />
+                <element signature="e#1229#1230#0" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="Nowaksiazka.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Nowaksiazka.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="84" selection-end-column="32" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -150,9 +130,9 @@
       <list>
         <option value="package-info" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="CSS File" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -186,10 +166,12 @@
         <option value="$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.java" />
         <option value="$PROJECT_DIR$/src/listaKsiazek/TabelaKsiazek.java" />
         <option value="$PROJECT_DIR$/src/listaKsiazek/LoaderTabelaKsiazki.java" />
-        <option value="$PROJECT_DIR$/src/bazadanych/DatabaseControll.java" />
         <option value="$PROJECT_DIR$/src/rejestracja/rejestracja.css" />
         <option value="$PROJECT_DIR$/src/rejestracja/rejestracja.fxml" />
         <option value="$PROJECT_DIR$/src/rejestracja/nowyuzytkownik.java" />
+        <option value="$PROJECT_DIR$/src/rejestracja/LoaderNowyUzytkownik.java" />
+        <option value="$PROJECT_DIR$/src/dodawanieKsiazki/Nowaksiazka.java" />
+        <option value="$PROJECT_DIR$/src/bazadanych/DatabaseControll.java" />
         <option value="$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java" />
       </list>
     </option>
@@ -315,7 +297,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LoaderTabelaKsiazki">
+  <component name="RunManager" selected="Application.LoaderNowyUzytkownik">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="HTML_USED" value="false" />
@@ -323,6 +305,25 @@
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+    </configuration>
+    <configuration name="LoaderNowyUzytkownik" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="rejestracja.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="rejestracja.LoaderNowyUzytkownik" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Library Project" />
+      <envs />
     </configuration>
     <configuration name="LoaderTabelaKsiazki" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -462,13 +463,15 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="Application.LoaderTabelaKsiazki" />
+      <item index="2" class="java.lang.String" itemvalue="Application.LoaderNowyUzytkownik" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.LoaderTabelaKsiazki" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.LoaderNowyUzytkownik" />
+        <item index="1" class="java.lang.String" itemvalue="Application.LoaderTabelaKsiazki" />
       </list>
     </recent_temporary>
   </component>
@@ -507,12 +510,12 @@
       <workItem from="1526918178694" duration="2973000" />
       <workItem from="1526925300719" duration="3364000" />
       <workItem from="1526988903194" duration="144000" />
-      <workItem from="1526989132151" duration="945000" />
+      <workItem from="1526989132151" duration="7565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29196000" />
+    <option name="totallyTimeSpent" value="35816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="-8" width="1297" height="784" extended-state="6" />
@@ -575,9 +578,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26697892" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -606,21 +609,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Nowaksiazka.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -782,13 +770,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/nowaksiazkas.java" />
-    <entry file="file://$PROJECT_DIR$/bazadanych/service.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bazadanych/README_DO_NOT_TOUCH_FILES.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -804,13 +785,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bazadanych/Ksiazka.java" />
-    <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/listaKsiazek/tabelaKsiazek.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -821,20 +795,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/listaKsiazek/TabelaKsiazek.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="45" column="57" lean-forward="false" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listaKsiazek/LoaderTabelaKsiazki.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/dodajksiazke.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -843,15 +803,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rejestracja/rejestracja.fxml">
+    <entry file="file://$PROJECT_DIR$/derby.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="42" column="61" lean-forward="false" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rejestracja/rejestracja.css">
@@ -859,17 +824,6 @@
         <state relative-caret-position="170">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bazadanych/DatabaseControll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
-          <folding>
-            <marker date="1526928214626" expanded="true" signature="1080:1225" ph="CREATE TABLE... KSIAZKA" />
-            <marker date="1526928214626" expanded="true" signature="1796:2014" ph="CREATE TABLE... UZYTKOWNIK" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -884,20 +838,88 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Nowaksiazka.java">
+    <entry file="file://$PROJECT_DIR$/src/rejestracja/rejestracja.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="61" lean-forward="false" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bazadanych/service.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1345">
+          <caret line="2572" column="0" lean-forward="false" selection-start-line="2572" selection-start-column="0" selection-end-line="2572" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listaKsiazek/LoaderTabelaKsiazki.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="59" selection-end-column="19" />
+          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rejestracja/LoaderNowyUzytkownik.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bazadanych/DatabaseControll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <folding>
+            <marker date="1526995704863" expanded="true" signature="1117:1262" ph="CREATE TABLE... KSIAZKA" />
+            <marker date="1526995704863" expanded="true" signature="1709:1730" ph="DROP TABLE U... " />
+            <marker date="1526995704863" expanded="true" signature="1885:2050" ph="CREATE TABLE... UZYTKOWNIK" />
+            <marker date="1526995704863" expanded="true" signature="1885:2051" ph="CREATE TABLE... UZYTKOWNIK" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listaKsiazek/TabelaKsiazek.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="59" column="12" lean-forward="false" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Nowaksiazka.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="84" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="21">
+          <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
           </folding>
         </state>
       </provider>

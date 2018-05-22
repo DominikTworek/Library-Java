@@ -1,13 +1,21 @@
 package rejestracja;
 
+import bazadanych.DatabaseControll;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
-public class NowyUzytkownik {
+import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
+
+public class NowyUzytkownik implements Initializable {
 
     @FXML
     private AnchorPane rejestracja_main;
@@ -33,13 +41,25 @@ public class NowyUzytkownik {
     @FXML
     private JFXButton anulujbutton;
 
+    bazadanych.DatabaseControll DatabaseControll;
+
     @FXML
     void anuluj(ActionEvent event) {
+        Stage rejestracja_zamknij = (Stage) rejestracja_main.getScene().getWindow();
+        rejestracja_zamknij.close();
+    }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        DatabaseControll = new DatabaseControll();
     }
 
     @FXML
     void dodajuzytkownika(ActionEvent event) {
+        String su = "SELECT id FROM UZYTKOWNIK";
+        ResultSet rsid = DatabaseControll.execQuery(su);
+
+
         String uzytimie = imie.getText();
         String uzytnazwisko = nazwisko.getText();
         String uzytlogin = login.getText();
@@ -54,6 +74,38 @@ public class NowyUzytkownik {
             alert.showAndWait();
             return;
         }
-    }
+        try {
+            while(rsid.next()) {
+                String getid = rsid.getString("id");
+                Integer test = Integer.valueOf(getid)+1;
+                String qu = "INSERT INTO UZYTKOWNIK VALUES (" +
+                        "" + test + "," +
+                        "'" + uzytimie + "'," +
+                        "'" + uzytnazwisko + "'," +
+                        "'" + uzytlogin + "'," +
+                        "'" + uzythaslo + "'," +
+                        "'" + uzytemail + "'," +
+                        "'" + 1 + "'" +
+                        ")";
+                System.out.println(qu);
+                if (DatabaseControll.execAction(qu)) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Potwierdzenie");
+                    alert.setHeaderText("Dodawanie użytkownika");
+                    alert.setContentText("Wszystkie dane dotyczące użytkownika zostały poprawnie dodane do bazy danych");
+                    alert.showAndWait();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Niepowodzenie");
+                    alert.setHeaderText("Dodawanie użytkoniwka");
+                    alert.setContentText("Dane nie zostały dodane do bazy danych. Spróbuj jeszcze raz.");
+                    alert.showAndWait();
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
+
+    }
 }

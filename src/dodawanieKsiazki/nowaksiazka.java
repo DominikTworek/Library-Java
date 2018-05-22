@@ -36,11 +36,6 @@ public class Nowaksiazka implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         DatabaseControll = new DatabaseControll();
-        sprawdzanie();
-    }
-
-    private void sprawdzanie() {
-
     }
 
 
