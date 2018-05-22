@@ -54,7 +54,7 @@ public class DatabaseControll {
                 //boolean b = stmt.execute("DROP TABLE UZYTKOWNIK");
                 System.out.println("Tabela uzytkownik już istnieje. Gotowy do pracy.");
             } else {
-                boolean b = stmt.execute("CREATE TABLE UZYTKOWNIK (id INTEGER PRIMARY KEY, imie VARCHAR(200),nazwisko VARCHAR(200),login VARCHAR (200),haslo VARCHAR(200),email VARCHAR(200), rola VARCHAR(200))");
+                boolean b = stmt.execute("CREATE TABLE UZYTKOWNIK (id INTEGER PRIMARY KEY, imie VARCHAR(200),nazwisko VARCHAR(200),login VARCHAR (200),haslo VARCHAR(200),email VARCHAR(200), rola INTEGER)");
             }
 
         } catch (SQLException e) {

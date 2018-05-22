@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tabelaUzytkownikow.TabelaUzytkownikow">
+    <children>
+        <TableView fx:id="tabelaUzytkownikow" layoutX="52.0" layoutY="38.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columns>
+                <TableColumn fx:id="idTab" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="imieTab" prefWidth="75.0" text="Imie" />
+                <TableColumn fx:id="nazwiskoTab" prefWidth="75.0" text="Nazwisko" />
+                <TableColumn fx:id="loginTab" prefWidth="75.0" text="Login" />
+                <TableColumn fx:id="hasloTab" prefWidth="75.0" text="Hasło" />
+            <TableColumn fx:id="emailTab" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="rolaTab" prefWidth="75.0" text="Rola" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </children>
+</AnchorPane>

@@ -1,7 +1,6 @@
-package listaKsiazek;
+package tabelaKsiazek;
 
 import bazadanych.DatabaseControll;
-import javafx.beans.Observable;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -12,7 +11,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import javax.xml.crypto.Data;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;

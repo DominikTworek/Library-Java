@@ -1,4 +1,4 @@
-package listaKsiazek;
+package tabelaKsiazek;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

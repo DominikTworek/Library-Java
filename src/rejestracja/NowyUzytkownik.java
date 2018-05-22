@@ -85,7 +85,7 @@ public class NowyUzytkownik implements Initializable {
                         "'" + uzytlogin + "'," +
                         "'" + uzythaslo + "'," +
                         "'" + uzytemail + "'," +
-                        "'" + 1 + "'" +
+                        "" + 1 + "" +
                         ")";
                 System.out.println(qu);
                 if (DatabaseControll.execAction(qu)) {
