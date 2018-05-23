@@ -40,8 +40,8 @@
         </VBox>
         <HBox layoutY="285.0" prefHeight="47.0" prefWidth="405.0">
             <children>
-                <JFXButton fx:id="zapiszbutton" onAction="#dodajuzytkownika" prefHeight="45.0" prefWidth="200.0" stylesheets="@rejestracja.css" text="Zapisz" />
-                <JFXButton fx:id="anulujbutton" onAction="#anuluj" prefHeight="45.0" prefWidth="200.0" stylesheets="@rejestracja.css" text="Anuluj" />
+                <JFXButton fx:id="zapiszbutton" onAction="#dodajuzytkownika" prefHeight="45.0" prefWidth="200.0" styleClass="jfx-button" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Zapisz" />
+                <JFXButton fx:id="anulujbutton" onAction="#anuluj" prefHeight="45.0" prefWidth="200.0" styleClass="jfx-button" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Anuluj" />
             </children></HBox>
     </children>
 </AnchorPane>
