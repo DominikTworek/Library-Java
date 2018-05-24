@@ -79,13 +79,13 @@ public class NowyUzytkownik implements Initializable {
                 String getid = rsid.getString("id");
                 Integer test = Integer.valueOf(getid)+1;
                 String qu = "INSERT INTO UZYTKOWNIK VALUES (" +
-                        "" + test + "," +
+                        "'" + test + "'," +
                         "'" + uzytimie + "'," +
                         "'" + uzytnazwisko + "'," +
                         "'" + uzytlogin + "'," +
                         "'" + uzythaslo + "'," +
                         "'" + uzytemail + "'," +
-                        "" + 1 + "" +
+                        "'" + 1 + "'" +
                         ")";
                 System.out.println(qu);
                 if (DatabaseControll.execAction(qu)) {

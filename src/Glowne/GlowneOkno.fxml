@@ -118,68 +118,20 @@
                   </VBox>
                   <AnchorPane fx:id="oknoWyp" prefHeight="442.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button layoutX="86.0" mnemonicParsing="false" onAction="#zmientab01" prefHeight="29.0" prefWidth="112.0" text="Wypożycz książkę" textAlignment="CENTER" />
-                        <Button layoutX="312.0" mnemonicParsing="false" onAction="#zmientab02" prefHeight="29.0" prefWidth="112.0" text="Przedłuż/Oddaj" textAlignment="CENTER" />
-                    <AnchorPane fx:id="zakladka" minHeight="0.0" minWidth="0.0" prefHeight="414.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+                        <HBox prefHeight="32.0" prefWidth="516.0" style="-fx-background-color: #6F6F6F;">
                            <children>
-                              <VBox prefHeight="413.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <children>
-                                    <HBox alignment="CENTER" prefHeight="173.0" prefWidth="516.0">
-                                       <children>
-                                          <TextField alignment="CENTER" promptText="Wpisz id książki">
-                                             <HBox.margin>
-                                                <Insets left="10.0" />
-                                             </HBox.margin>
-                                          </TextField>
-                                          <VBox alignment="CENTER" prefHeight="100.0" prefWidth="312.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa Książki" />
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" />
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wydawca" />
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <VBox prefHeight="108.0" prefWidth="450.0">
-                                       <children>
-                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="549.0">
-                                             <children>
-                                                <TextField alignment="CENTER" promptText="Wpisz id użytkownika">
-                                                   <HBox.margin>
-                                                      <Insets left="10.0" />
-                                                   </HBox.margin>
-                                                </TextField>
-                                                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="312.0">
-                                                   <children>
-                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Imie" />
-                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko" />
-                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-                                                   </children>
-                                                </VBox>
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                    <HBox alignment="CENTER" prefHeight="104.0" prefWidth="451.0">
-                                       <children>
-                                          <JFXButton prefHeight="41.0" prefWidth="109.0" ripplerFill="TRANSPARENT" styleClass="jfx-button" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Wypożycz" textAlignment="CENTER">
-                                             <graphic>
-                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@icons/confirm.png" />
-                                                   </image>
-                                                </ImageView>
-                                             </graphic>
-                                             <font>
-                                                <Font name="Arial" size="12.0" />
-                                             </font>
-                                          </JFXButton>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </VBox>
+                              <Button mnemonicParsing="false" onAction="#zmientab01" prefHeight="29.0" prefWidth="112.0" text="Wypożycz książkę" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets left="110.0" top="1.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#zmientab02" prefHeight="29.0" prefWidth="112.0" text="Przedłuż/Oddaj" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets left="50.0" top="1.0" />
+                                 </HBox.margin>
+                              </Button>
                            </children>
-                        </AnchorPane>
+                        </HBox>
                     <AnchorPane fx:id="zakladka_dwa" minHeight="0.0" minWidth="0.0" prefHeight="413.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
                            <children>
                               <BorderPane layoutX="98.0" layoutY="58.0" prefHeight="346.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -228,6 +180,92 @@
                                     </HBox>
                                  </bottom>
                               </BorderPane>
+                           </children>
+                        </AnchorPane>
+                    <AnchorPane fx:id="zakladka" minHeight="0.0" minWidth="0.0" prefHeight="414.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+                           <children>
+                              <VBox prefHeight="413.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox fx:id="tloKsiazka" alignment="CENTER" prefHeight="125.0" prefWidth="486.0" style="-fx-background-color: #B0B0B0;">
+                                       <children>
+                                          <TextField fx:id="idKsiazki" alignment="CENTER" onKeyTyped="#idKsiazki" promptText="Wpisz id książki">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <VBox alignment="CENTER" prefHeight="100.0" prefWidth="312.0">
+                                             <children>
+                                                <Text fx:id="nazwaKsiazki" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa Książki">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin></Text>
+                                                <Text fx:id="autorKsiazki" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin></Text>
+                                                <Text fx:id="wydawcaKsiazki" strokeType="OUTSIDE" strokeWidth="0.0" text="Wydawca">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin></Text>
+                                                <Text fx:id="dostepnoscKsiazka" layoutX="141.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dostępność">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox fx:id="tloUzytkownik" alignment="CENTER" prefHeight="125.0" prefWidth="486.0" style="-fx-background-color: #B0B0B0;">
+                                       <children>
+                                          <TextField fx:id="idUzytkownika" alignment="CENTER" onKeyTyped="#idUzytkownika" promptText="Wpisz id użytkownika">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <VBox alignment="CENTER" prefHeight="100.0" prefWidth="312.0">
+                                             <children>
+                                                <Text fx:id="imieU" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin></Text>
+                                                <Text fx:id="nazwiskoU" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin></Text>
+                                                <Text fx:id="loginU" layoutX="141.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" />
+                                                <Text fx:id="emailU" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin></Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="107.0" prefWidth="516.0">
+                                       <children>
+                                          <JFXButton prefHeight="41.0" prefWidth="109.0" ripplerFill="TRANSPARENT" styleClass="jfx-button" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Wypożycz" textAlignment="CENTER">
+                                             <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/confirm.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
                            </children>
                         </AnchorPane>
                      </children>
