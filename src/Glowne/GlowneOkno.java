@@ -333,6 +333,7 @@ public class GlowneOkno implements Initializable {
     void idUzytkownika(KeyEvent event) {
         String id = idUzytkownika.getText();
         //language=GenericSQL
+        //test
         String qu = "SELECT * FROM UZYTKOWNIK WHERE id = '" + id + "'";
         ResultSet rs = DatabaseControll.execQuery(qu);
         Boolean spr_uzyt = false;

@@ -56,7 +56,7 @@ public class NowyUzytkownik implements Initializable {
 
     @FXML
     void dodajuzytkownika(ActionEvent event) {
-        String su = "SELECT id FROM UZYTKOWNIK";
+        String su = "SELECT MAX(id) as id FROM UZYTKOWNIK";
         ResultSet rsid = DatabaseControll.execQuery(su);
 
 
@@ -77,9 +77,10 @@ public class NowyUzytkownik implements Initializable {
         try {
             while(rsid.next()) {
                 String getid = rsid.getString("id");
-                Integer test = Integer.valueOf(getid)+1;
+                Integer test = Integer.valueOf(getid);
+                int test2 = Integer.parseInt(getid)+1;
                 String qu = "INSERT INTO UZYTKOWNIK VALUES (" +
-                        "'" + test + "'," +
+                        "'" + test2 + "'," +
                         "'" + uzytimie + "'," +
                         "'" + uzytnazwisko + "'," +
                         "'" + uzytlogin + "'," +

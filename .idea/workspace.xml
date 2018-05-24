@@ -72,16 +72,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GlowneOkno.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DatabaseControll.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bazadanych/DatabaseControll.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+              <folding>
+                <marker date="1527195905193" expanded="true" signature="1292:1437" ph="CREATE TABLE... KSIAZKA" />
+                <marker date="1527195905193" expanded="true" signature="1884:1905" ph="DROP TABLE U... " />
+                <marker date="1527195905193" expanded="true" signature="2060:2218" ph="CREATE TABLE... UZYTKOWNIK" />
+                <marker date="1527195905193" expanded="true" signature="2060:2231" ph="CREATE TABLE... UZYTKOWNIK" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlowneOkno.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Glowne/GlowneOkno.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="346" column="39" lean-forward="false" selection-start-line="346" selection-start-column="39" selection-end-line="346" selection-end-column="39" />
+            <state relative-caret-position="148">
+              <caret line="335" column="14" lean-forward="false" selection-start-line="335" selection-start-column="14" selection-end-line="335" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1527179428774" expanded="true" signature="9372:9417" ph="SELECT * FRO... KSIAZKA" />
-                <marker date="1527179428774" expanded="true" signature="10860:10908" ph="SELECT * FRO... UZYTKOWNIK" />
+                <marker date="1527192638588" expanded="true" signature="9372:9417" ph="SELECT * FRO... KSIAZKA" />
+                <marker date="1527192638588" expanded="true" signature="10875:10923" ph="SELECT * FRO... UZYTKOWNIK" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NowyUzytkownik.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="82" column="40" lean-forward="false" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,6 +138,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -149,9 +175,9 @@
         <option value="$PROJECT_DIR$/src/dodawanieKsiazki/dodajksiazke.css" />
         <option value="$PROJECT_DIR$/src/Glowne/LoaderGlowneOkno.java" />
         <option value="$PROJECT_DIR$/src/Glowne/GlowneOkno.fxml" />
-        <option value="$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java" />
-        <option value="$PROJECT_DIR$/src/bazadanych/DatabaseControll.java" />
         <option value="$PROJECT_DIR$/src/Glowne/GlowneOkno.java" />
+        <option value="$PROJECT_DIR$/src/bazadanych/DatabaseControll.java" />
+        <option value="$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java" />
       </list>
     </option>
   </component>
@@ -245,7 +271,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libraries/derbyclient.jar!/" />
+    <property name="last_opened_file_path" value="D:/Programy/Git/bin/git.exe" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -571,12 +597,12 @@
       <workItem from="1527066228856" duration="1848000" />
       <workItem from="1527068112779" duration="1950000" />
       <workItem from="1527107228002" duration="6564000" />
-      <workItem from="1527169525422" duration="11853000" />
+      <workItem from="1527169525422" duration="15096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65644000" />
+    <option name="totallyTimeSpent" value="68887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="-8" width="1297" height="784" extended-state="6" />
@@ -930,6 +956,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -970,36 +997,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="90" column="20" lean-forward="false" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bazadanych/DatabaseControll.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+        <state relative-caret-position="117">
+          <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
           <folding>
-            <marker date="1527176671136" expanded="true" signature="1292:1437" ph="CREATE TABLE... KSIAZKA" />
-            <marker date="1527176671136" expanded="true" signature="1884:1905" ph="DROP TABLE U... " />
-            <marker date="1527176671136" expanded="true" signature="2060:2218" ph="CREATE TABLE... UZYTKOWNIK" />
-            <marker date="1527176671136" expanded="true" signature="2060:2231" ph="CREATE TABLE... UZYTKOWNIK" />
+            <marker date="1527195905193" expanded="true" signature="1292:1437" ph="CREATE TABLE... KSIAZKA" />
+            <marker date="1527195905193" expanded="true" signature="1884:1905" ph="DROP TABLE U... " />
+            <marker date="1527195905193" expanded="true" signature="2060:2218" ph="CREATE TABLE... UZYTKOWNIK" />
+            <marker date="1527195905193" expanded="true" signature="2060:2231" ph="CREATE TABLE... UZYTKOWNIK" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Glowne/GlowneOkno.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="346" column="39" lean-forward="false" selection-start-line="346" selection-start-column="39" selection-end-line="346" selection-end-column="39" />
+        <state relative-caret-position="148">
+          <caret line="335" column="14" lean-forward="false" selection-start-line="335" selection-start-column="14" selection-end-line="335" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1527179428774" expanded="true" signature="9372:9417" ph="SELECT * FRO... KSIAZKA" />
-            <marker date="1527179428774" expanded="true" signature="10860:10908" ph="SELECT * FRO... UZYTKOWNIK" />
+            <marker date="1527192638588" expanded="true" signature="9372:9417" ph="SELECT * FRO... KSIAZKA" />
+            <marker date="1527192638588" expanded="true" signature="10875:10923" ph="SELECT * FRO... UZYTKOWNIK" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="82" column="40" lean-forward="false" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
