@@ -1,8 +1,8 @@
 ----------------------------------------------------------------
-Thu May 24 18:30:31 CEST 2018:
- Uruchamianie wersji The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137) systemu Derby: instancja a816c00e-0163-92fc-cc95-0000069884c0
-w katalogu bazy danych D:\studia\java\projekt2\bazadanych jdk.internal.loader.ClassLoaders$AppClassLoader@73a8dfcc 
-
+Thu May 24 20:15:07 CEST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0163-935c-91ec-00000698a710 
+on database directory D:\studia\java\projekt2\bazadanych with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73a8dfcc 
+Loaded from file:/D:/studia/java/projekt2/libraries/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=9.0.4+11
 user.dir=D:\studia\java\projekt2
@@ -10,4 +10,4 @@ os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=null
-Uruchomiono program ładujący klasę bazy danych - derby.database.classpath=''
+Database Class Loader started - derby.database.classpath=''
