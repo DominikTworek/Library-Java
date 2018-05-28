@@ -2,8 +2,11 @@ package Glowne;
 
 
 import bazadanych.DatabaseControll;
+import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.effects.JFXDepthManager;
 import javafx.animation.FadeTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -12,6 +15,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
@@ -27,6 +33,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class GlowneOkno implements Initializable {
@@ -79,6 +89,12 @@ public class GlowneOkno implements Initializable {
 
     @FXML
     private Text emailU;
+
+    @FXML
+    private JFXTextField idKsiazki2;
+
+    @FXML
+    private ListView<String> listaInformacji;
 
 
     @FXML
@@ -364,5 +380,117 @@ public class GlowneOkno implements Initializable {
             animacje_tekstu_uzyt();
     }
 
+    @FXML
+    void przyciskWypozycz(ActionEvent event){
+        String id_ksiazki = idKsiazki.getText();
+        String id_uzytkownika = idUzytkownika.getText();
+
+        String spr ="SELECT dostepnosc FROM KSIAZKA WHERE  id = '" + id_ksiazki + "'";
+        ResultSet sprawdzenie = DatabaseControll.execQuery(spr);
+        String bospr = null;
+        try {
+            while(sprawdzenie.next()) {
+                bospr = sprawdzenie.getString("dostepnosc");
+                Boolean bospr2 = Boolean.valueOf(bospr);
+                if(bospr2){
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Potwierdź poprawność danych");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Czy napewno chcesz wypożyczyć książkę \n" + nazwaKsiazki.getText() + " dla " + imieU.getText() + " " + nazwiskoU.getText() + " ?");
+                    alert.showAndWait();
+
+                    Optional<ButtonType> response = alert.showAndWait();
+                    if(response.get() == ButtonType.OK) {
+
+                        String qu = "INSERT INTO WYPOZYCZENIA(ksiazka_id, uzytkownik_id) VALUES ("
+                                + "'" + id_ksiazki + "',"
+                                + "'" + id_uzytkownika + "')";
+                        String qu2 = "UPDATE KSIAZKA SET dostepnosc = false WHERE id = '" + id_ksiazki + "'";
+                        System.out.println(qu + " i " + qu2);
+
+
+                        if(DatabaseControll.execAction(qu)&&DatabaseControll.execAction(qu2)){
+                            Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                            alert2.setTitle("Potwierdzenie");
+                            alert2.setHeaderText("Dodawanie wypożyczenia");
+                            alert2.setContentText("Wszystkie dane dotyczące wypożyczenia zostały poprawnie dodane do bazy danych");
+                            alert2.showAndWait();
+                        } else {
+                            Alert alert2 = new Alert(Alert.AlertType.ERROR);
+                            alert2.setTitle("Niepowodzenie");
+                            alert2.setHeaderText("Dodawanie wypożyczenia");
+                            alert2.setContentText("Dane nie zostały dodane do bazy danych(nieznany błąd). Spróbuj jeszcze raz.");
+                            alert2.showAndWait();
+                        }
+                    } else {
+                        Alert alert2 = new Alert(Alert.AlertType.ERROR);
+                        alert2.setTitle("Niepowodzenie");
+                        alert2.setHeaderText("Dodawanie wypożyczenia");
+                        alert2.setContentText("Dane nie zostały dodane do bazy danych(nieznany błąd).Spróbuj jeszcze raz.");
+                        alert2.showAndWait();
+                    }
+                } else {
+                    Alert alert3 = new Alert(Alert.AlertType.ERROR);
+                    alert3.setTitle("Niepowodzenie");
+                    alert3.setHeaderText("Dodawanie wypożyczenia");
+                    alert3.setContentText("Ta książka jest już wypożyczona");
+                    alert3.showAndWait();
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    void zaladujInformacje(KeyEvent event) {
+        ObservableList<String> wypozyczenieInformacje = FXCollections.observableArrayList();
+        SimpleDateFormat dfDate  = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        String data="";
+        Calendar c = Calendar.getInstance();
+
+        String id_ksiazki = idKsiazki2.getText();
+        String qu = "SELECT * FROM WYPOZYCZENIA WHERE ksiazka_id = '" + id_ksiazki + "'";
+        ResultSet rs = DatabaseControll.execQuery(qu);
+        try{
+            while (rs.next()){
+                String pid_ksiazki = id_ksiazki;
+                String pid_uzytkownika = rs.getString("uzytkownik_id");
+                Timestamp pczas = rs.getTimestamp("czas");
+
+                Integer podnowienia = rs.getInt("odnowienia");
+                data=dfDate.format(pczas);
+
+                wypozyczenieInformacje.add("Data wypożyczenia:" + data);
+                wypozyczenieInformacje.add("Ilość odnowień:" + podnowienia);
+
+                wypozyczenieInformacje.add("");
+                wypozyczenieInformacje.add("");
+                wypozyczenieInformacje.add("Informacje o książce:");
+                qu = "SELECT * FROM KSIAZKA WHERE id = '" + pid_ksiazki + "'";
+                ResultSet rs2 = DatabaseControll.execQuery(qu);
+                while(rs2.next()){
+                    wypozyczenieInformacje.add("Tytul książki: " + rs2.getString("tytul"));
+                    wypozyczenieInformacje.add("Autor książki: " + rs2.getString("autor"));
+                    wypozyczenieInformacje.add("Wydawca książki: " + rs2.getString("wydawca"));
+                }
+
+                wypozyczenieInformacje.add("");
+                wypozyczenieInformacje.add("");
+                wypozyczenieInformacje.add("Informacje o użytkowniku:");
+                qu = "SELECT * FROM UZYTKOWNIK WHERE id = '" + pid_uzytkownika + "'";
+                ResultSet rs3 = DatabaseControll.execQuery(qu);
+                while(rs3.next()){
+                    wypozyczenieInformacje.add("Imie: " + rs3.getString("imie"));
+                    wypozyczenieInformacje.add("Nazwisko: " + rs3.getString("nazwisko"));
+                    wypozyczenieInformacje.add("Login: " + rs3.getString("login"));
+                    wypozyczenieInformacje.add("Email: " + rs3.getString("email"));
+                }
+
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        listaInformacji.getItems().setAll(wypozyczenieInformacje);
+    }
 
 }

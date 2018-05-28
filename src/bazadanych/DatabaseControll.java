@@ -14,6 +14,7 @@ public class DatabaseControll {
         polaczenie();
         tworzenieTabeliKsiazka();
         tworzenieTabeliUzytkownik();
+        tworzenieTabeliWyporzyczenia();
     }
 
     public static DatabaseControll getInstance(){
@@ -62,6 +63,27 @@ public class DatabaseControll {
                 System.out.println("Tabela uzytkownik już istnieje. Gotowy do pracy.");
             } else {
                 boolean b = stmt.execute("CREATE TABLE UZYTKOWNIK (id VARCHAR(200) PRIMARY KEY, imie VARCHAR(200),nazwisko VARCHAR(200),login VARCHAR (200),haslo VARCHAR(200),email VARCHAR(200), rola VARCHAR(200))");
+                String qu = "INSERT INTO UZYTKOWNIK VALUES ('1', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', '2')";
+                DatabaseControll.execAction(qu);
+            }
+
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    void tworzenieTabeliWyporzyczenia() {
+        try {
+            stmt = conn.createStatement();
+
+            DatabaseMetaData dbm = conn.getMetaData();
+            ResultSet tabelewyporzyczenia = dbm.getTables(null, null, "WYPOZYCZENIA", null);
+
+            if (tabelewyporzyczenia.next()) {
+                //boolean b = stmt.execute("DROP TABLE WYPOZYCZENIA");
+                System.out.println("Tabela WYPOZYCZENIA już istnieje. Gotowy do pracy.");
+            } else {
+                boolean b = stmt.execute("CREATE TABLE WYPOZYCZENIA (ksiazka_id VARCHAR(200), uzytkownik_id VARCHAR(200), czas TIMESTAMP DEFAULT CURRENT_TIMESTAMP, odnowienia INTEGER DEFAULT 0, FOREIGN KEY (ksiazka_id) REFERENCES KSIAZKA(id), FOREIGN KEY (uzytkownik_id) REFERENCES UZYTKOWNIK(id))");
                 String qu = "INSERT INTO UZYTKOWNIK VALUES ('1', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', '2')";
                 DatabaseControll.execAction(qu);
             }
