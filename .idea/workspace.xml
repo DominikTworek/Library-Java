@@ -10,6 +10,8 @@
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c101.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c101.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c111.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c111.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c121.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c121.dat" />
+      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c130.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c130.dat" />
+      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c141.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c141.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c150.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c150.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c161.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c161.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c171.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c171.dat" />
@@ -17,11 +19,17 @@
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c200.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c200.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c211.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c211.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c221.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c221.dat" />
+      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c2d0.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c2d0.dat" />
+      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c2e1.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c2e1.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c31.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c31.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c41.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c41.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c490.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c490.dat" />
+      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c4a1.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c4a1.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c4b0.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c4b0.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c4c1.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c4c1.dat" />
+      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c4d0.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c4d0.dat" />
+      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c4e1.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c4e1.dat" />
+      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c4f1.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c4f1.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c51.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c51.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c60.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c60.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c71.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c71.dat" />
@@ -31,10 +39,26 @@
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/cb1.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/cb1.dat" />
       <change beforePath="$PROJECT_DIR$/bazadanych/seg0/cf0.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/cf0.dat" />
       <change beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno$1.class" afterPath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno$2.class" afterPath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno$2.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno$3.class" afterPath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno$3.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno.class" afterPath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno.fxml" afterPath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno.fxml" />
       <change beforePath="$PROJECT_DIR$/out/production/Library Project/bazadanych/DatabaseControll.class" afterPath="$PROJECT_DIR$/out/production/Library Project/bazadanych/DatabaseControll.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library Project/rejestracja/nowyuzytkownik.class" afterPath="$PROJECT_DIR$/out/production/Library Project/rejestracja/nowyuzytkownik.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow$uzytkownicy.class" afterPath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow$uzytkownicy.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow.class" afterPath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow.fxml" afterPath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow.fxml" />
       <change beforePath="$PROJECT_DIR$/src/Glowne/GlowneOkno.fxml" afterPath="$PROJECT_DIR$/src/Glowne/GlowneOkno.fxml" />
       <change beforePath="$PROJECT_DIR$/src/Glowne/GlowneOkno.java" afterPath="$PROJECT_DIR$/src/Glowne/GlowneOkno.java" />
       <change beforePath="$PROJECT_DIR$/src/bazadanych/DatabaseControll.java" afterPath="$PROJECT_DIR$/src/bazadanych/DatabaseControll.java" />
+      <change beforePath="$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.fxml" afterPath="$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.java" afterPath="$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.java" />
+      <change beforePath="$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java" afterPath="$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java" />
+      <change beforePath="$PROJECT_DIR$/src/tabelaKsiazek/TabelaKsiazek.java" afterPath="$PROJECT_DIR$/src/tabelaKsiazek/TabelaKsiazek.java" />
+      <change beforePath="$PROJECT_DIR$/src/tabelaKsiazek/tabelaKsiazek.fxml" afterPath="$PROJECT_DIR$/src/tabelaKsiazek/tabelaKsiazek.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.fxml" afterPath="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.java" afterPath="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +84,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="baza" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DebuggerManager">
@@ -109,14 +138,18 @@
       <file leaf-file-name="DatabaseControll.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bazadanych/DatabaseControll.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-21">
-              <caret line="45" column="140" lean-forward="false" selection-start-line="45" selection-start-column="133" selection-end-line="45" selection-end-column="140" />
+            <state relative-caret-position="181">
+              <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
               <folding>
-                <marker date="1527523731468" expanded="true" signature="1332:1477" ph="CREATE TABLE... KSIAZKA" />
-                <marker date="1527523731468" expanded="true" signature="1924:1945" ph="DROP TABLE U... " />
-                <marker date="1527523731468" expanded="true" signature="2100:2258" ph="CREATE TABLE... UZYTKOWNIK" />
-                <marker date="1527523731468" expanded="true" signature="2100:2271" ph="CREATE TABLE... UZYTKOWNIK" />
-                <marker date="1527523731468" expanded="true" signature="3075:3330" ph="CREATE TABLE... WYPOZYCZENIA" />
+                <marker date="1527777719419" expanded="true" signature="1294:1330" ph="ALTER TABLE KSIAZKA... " />
+                <marker date="1527777719419" expanded="true" signature="1482:1641" ph="CREATE TABLE... KSIAZKA" />
+                <marker date="1527777719419" expanded="true" signature="2088:2109" ph="DROP TABLE U... " />
+                <marker date="1527777719419" expanded="true" signature="2264:2422" ph="CREATE TABLE... UZYTKOWNIK" />
+                <marker date="1527777719419" expanded="true" signature="2264:2459" ph="CREATE TABLE... UZYTKOWNIK" />
+                <marker date="1527777719419" expanded="true" signature="3086:3109" ph="DROP TABLE W... " />
+                <marker date="1527777719419" expanded="true" signature="3157:3190" ph="ALTER TABLE WYPOZYCZENIA... " />
+                <marker date="1527777719419" expanded="true" signature="3157:3198" ph="ALTER TABLE WYPOZYCZENIA... " />
+                <marker date="1527777719419" expanded="true" signature="3355:3683" ph="CREATE TABLE... WYPOZYCZENIA" />
               </folding>
             </state>
           </provider>
@@ -125,13 +158,25 @@
       <file leaf-file-name="GlowneOkno.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Glowne/GlowneOkno.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="348" column="32" lean-forward="false" selection-start-line="348" selection-start-column="32" selection-end-line="348" selection-end-column="32" />
+            <state relative-caret-position="176">
+              <caret line="507" column="81" lean-forward="false" selection-start-line="507" selection-start-column="81" selection-end-line="507" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1527528822260" expanded="true" signature="9831:9876" ph="SELECT * FRO... KSIAZKA" />
-                <marker date="1527528822260" expanded="true" signature="11334:11382" ph="SELECT * FRO... UZYTKOWNIK" />
+                <element signature="method#przyciskWypozycz#0;class#GlowneOkno#0" expanded="false" />
+                <element signature="method#przycyskOddaj#0;class#GlowneOkno#0" expanded="false" />
+                <marker date="1527777783126" expanded="true" signature="10297:10342" ph="SELECT * FRO... KSIAZKA" />
+                <marker date="1527777783126" expanded="true" signature="12011:12059" ph="SELECT * FRO... UZYTKOWNIK" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TabelaKsiazek.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tabelaKsiazek/TabelaKsiazek.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,18 +184,18 @@
       <file leaf-file-name="Nowaksiazka.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Nowaksiazka.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="71" column="32" lean-forward="false" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+            <state relative-caret-position="1255">
+              <caret line="88" column="32" lean-forward="false" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NowyUzytkownik.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java">
+      <file leaf-file-name="TabelaUzytkownikow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="78" column="28" lean-forward="false" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="28" />
+            <state relative-caret-position="1564">
+              <caret line="108" column="57" lean-forward="false" selection-start-line="108" selection-start-column="57" selection-end-line="108" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -214,13 +259,13 @@
         <option value="$PROJECT_DIR$/src/rejestracja/LoaderNowyUzytkownik.java" />
         <option value="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.fxml" />
         <option value="$PROJECT_DIR$/src/tabelaUzytkownikow/LoaderTabelaUzytkownikow.java" />
-        <option value="$PROJECT_DIR$/src/dodawanieKsiazki/Nowaksiazka.java" />
-        <option value="$PROJECT_DIR$/src/tabelaKsiazek/TabelaKsiazek.java" />
-        <option value="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.java" />
         <option value="$PROJECT_DIR$/src/dodawanieKsiazki/dodajksiazke.css" />
         <option value="$PROJECT_DIR$/src/Glowne/LoaderGlowneOkno.java" />
         <option value="$PROJECT_DIR$/src/Glowne/GlowneOkno.fxml" />
         <option value="$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java" />
+        <option value="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.java" />
+        <option value="$PROJECT_DIR$/src/tabelaKsiazek/TabelaKsiazek.java" />
+        <option value="$PROJECT_DIR$/src/dodawanieKsiazki/Nowaksiazka.java" />
         <option value="$PROJECT_DIR$/src/bazadanych/DatabaseControll.java" />
         <option value="$PROJECT_DIR$/src/Glowne/GlowneOkno.java" />
       </list>
@@ -258,9 +303,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,13 +340,13 @@
               <item name="projekt2" type="b2602c69:ProjectViewProjectNode" />
               <item name="projekt2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rejestracja" type="462c0819:PsiDirectoryNode" />
+              <item name="tabelaKsiazek" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -643,12 +688,14 @@
       <workItem from="1527068112779" duration="1950000" />
       <workItem from="1527107228002" duration="6564000" />
       <workItem from="1527169525422" duration="16532000" />
-      <workItem from="1527523022461" duration="6524000" />
+      <workItem from="1527523022461" duration="8122000" />
+      <workItem from="1527688764531" duration="10200000" />
+      <workItem from="1527770086073" duration="6057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76847000" />
+    <option name="totallyTimeSpent" value="94702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="-8" width="1297" height="784" extended-state="6" />
@@ -656,73 +703,38 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26697892" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28315946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17954724" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26697892" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -767,14 +779,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Main.java">
@@ -785,14 +797,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
@@ -912,26 +924,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/rejestracja/rejestracja.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rejestracja/rejestracja.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="61" lean-forward="false" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bazadanych/service.properties">
@@ -947,16 +948,6 @@
           <caret line="2572" column="0" lean-forward="false" selection-start-line="2572" selection-start-column="0" selection-end-line="2572" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tabelaKsiazek/tabelaKsiazek.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rejestracja/LoaderNowyUzytkownik.java">
@@ -984,13 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tabelaKsiazek/TabelaKsiazek.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tabelaUzytkownikow/LoaderTabelaUzytkownikow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -998,21 +982,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tabelaUzytkownikow/tabelaUzytkownikow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Glowne/LoaderGlowneOkno.java">
@@ -1024,54 +1001,98 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Glowne/GlowneOkno.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1465">
           <caret line="223" column="90" lean-forward="false" selection-start-line="223" selection-start-column="90" selection-end-line="223" selection-end-column="90" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="78" column="28" lean-forward="false" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="28" />
+        <state relative-caret-position="884">
+          <caret line="65" column="43" lean-forward="false" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="108" column="57" lean-forward="false" selection-start-line="108" selection-start-column="57" selection-end-line="108" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tabelaKsiazek/tabelaKsiazek.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="45" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Nowaksiazka.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="71" column="32" lean-forward="false" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+        <state relative-caret-position="1255">
+          <caret line="88" column="32" lean-forward="false" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tabelaKsiazek/TabelaKsiazek.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bazadanych/DatabaseControll.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="45" column="140" lean-forward="false" selection-start-line="45" selection-start-column="133" selection-end-line="45" selection-end-column="140" />
+        <state relative-caret-position="181">
+          <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
           <folding>
-            <marker date="1527523731468" expanded="true" signature="1332:1477" ph="CREATE TABLE... KSIAZKA" />
-            <marker date="1527523731468" expanded="true" signature="1924:1945" ph="DROP TABLE U... " />
-            <marker date="1527523731468" expanded="true" signature="2100:2258" ph="CREATE TABLE... UZYTKOWNIK" />
-            <marker date="1527523731468" expanded="true" signature="2100:2271" ph="CREATE TABLE... UZYTKOWNIK" />
-            <marker date="1527523731468" expanded="true" signature="3075:3330" ph="CREATE TABLE... WYPOZYCZENIA" />
+            <marker date="1527777719419" expanded="true" signature="1294:1330" ph="ALTER TABLE KSIAZKA... " />
+            <marker date="1527777719419" expanded="true" signature="1482:1641" ph="CREATE TABLE... KSIAZKA" />
+            <marker date="1527777719419" expanded="true" signature="2088:2109" ph="DROP TABLE U... " />
+            <marker date="1527777719419" expanded="true" signature="2264:2422" ph="CREATE TABLE... UZYTKOWNIK" />
+            <marker date="1527777719419" expanded="true" signature="2264:2459" ph="CREATE TABLE... UZYTKOWNIK" />
+            <marker date="1527777719419" expanded="true" signature="3086:3109" ph="DROP TABLE W... " />
+            <marker date="1527777719419" expanded="true" signature="3157:3190" ph="ALTER TABLE WYPOZYCZENIA... " />
+            <marker date="1527777719419" expanded="true" signature="3157:3198" ph="ALTER TABLE WYPOZYCZENIA... " />
+            <marker date="1527777719419" expanded="true" signature="3355:3683" ph="CREATE TABLE... WYPOZYCZENIA" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Glowne/GlowneOkno.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="348" column="32" lean-forward="false" selection-start-line="348" selection-start-column="32" selection-end-line="348" selection-end-column="32" />
+        <state relative-caret-position="176">
+          <caret line="507" column="81" lean-forward="false" selection-start-line="507" selection-start-column="81" selection-end-line="507" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1527528822260" expanded="true" signature="9831:9876" ph="SELECT * FRO... KSIAZKA" />
-            <marker date="1527528822260" expanded="true" signature="11334:11382" ph="SELECT * FRO... UZYTKOWNIK" />
+            <element signature="method#przyciskWypozycz#0;class#GlowneOkno#0" expanded="false" />
+            <element signature="method#przycyskOddaj#0;class#GlowneOkno#0" expanded="false" />
+            <marker date="1527777783126" expanded="true" signature="10297:10342" ph="SELECT * FRO... KSIAZKA" />
+            <marker date="1527777783126" expanded="true" signature="12011:12059" ph="SELECT * FRO... UZYTKOWNIK" />
           </folding>
         </state>
       </provider>

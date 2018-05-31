@@ -29,6 +29,7 @@ import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 
+import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -67,6 +68,9 @@ public class GlowneOkno implements Initializable {
     private HBox tloUzytkownik;
 
     @FXML
+    private Text cenaKsiazki;
+
+    @FXML
     private Text nazwaKsiazki;
 
     @FXML
@@ -95,6 +99,8 @@ public class GlowneOkno implements Initializable {
 
     @FXML
     private ListView<String> listaInformacji;
+
+    Boolean sprWczytaniaKsiazki = false;
 
 
     @FXML
@@ -222,6 +228,7 @@ public class GlowneOkno implements Initializable {
         nazwaKsiazki.setVisible(true);
         wydawcaKsiazki.setVisible(true);
         dostepnoscKsiazka.setVisible(true);
+        cenaKsiazki.setVisible(true);
         nazwaKsiazki.setOpacity(0);
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1501));
@@ -250,9 +257,16 @@ public class GlowneOkno implements Initializable {
         fadeTransition4.setByValue(0);
         fadeTransition4.setToValue(1);
         fadeTransition4.play();
+        cenaKsiazki.setOpacity(0);
+        FadeTransition fadeTransition5 = new FadeTransition();
+        fadeTransition5.setDuration(Duration.millis(1500));
+        fadeTransition5.setNode(cenaKsiazki);
+        fadeTransition5.setByValue(0);
+        fadeTransition5.setToValue(1);
+        fadeTransition5.play();
     }
 
-    void tekst_false_ksiazka (){
+    void tekst_false_ksiazka() {
         autorKsiazki.setOpacity(0);
         FadeTransition fadeTransition2 = new FadeTransition();
         fadeTransition2.setDuration(Duration.millis(1502));
@@ -296,7 +310,7 @@ public class GlowneOkno implements Initializable {
         fadeTransition4.play();
     }
 
-    void tekst_false_uzyt(){
+    void tekst_false_uzyt() {
         nazwiskoU.setOpacity(0);
         FadeTransition fadeTransition2 = new FadeTransition();
         fadeTransition2.setDuration(Duration.millis(1501));
@@ -320,11 +334,14 @@ public class GlowneOkno implements Initializable {
                 String pautor = rs.getString("autor");
                 String pwydawca = rs.getString("wydawca");
                 Boolean pdostepnosc = rs.getBoolean("dostepnosc");
+                Integer pcena = rs.getInt("cena");
+                String wyswietlanie_ceny = String.valueOf(pcena);
                 status_ksiazki = String.valueOf((pdostepnosc));
                 nazwaKsiazki.setText(ptytul);
                 autorKsiazki.setText(pautor);
                 wydawcaKsiazki.setText(pwydawca);
-                if(status_ksiazki == "true")
+                cenaKsiazki.setText(wyswietlanie_ceny);
+                if (status_ksiazki == "true")
                     status_ksiazki = "Dostępna";
                 else
                     status_ksiazki = "Niedostepna";
@@ -334,14 +351,14 @@ public class GlowneOkno implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if(!spr_ksiazki){
+        if (!spr_ksiazki) {
             nazwaKsiazki.setVisible(false);
             autorKsiazki.setText("Nie ma takiej książki");
             wydawcaKsiazki.setVisible(false);
             dostepnoscKsiazka.setVisible(false);
+            cenaKsiazki.setVisible(false);
             tekst_false_ksiazka();
-        }
-        else
+        } else
             animacje_tekstu_ksiazka();
     }
 
@@ -368,39 +385,38 @@ public class GlowneOkno implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if(!spr_uzyt){
+        if (!spr_uzyt) {
             nazwiskoU.setText("Nie ma takiego uzytkownika");
             imieU.setVisible(false);
             nazwiskoU.setOpacity(1);
             loginU.setVisible(false);
             emailU.setVisible(false);
             tekst_false_uzyt();
-        }
-        else
+        } else
             animacje_tekstu_uzyt();
     }
 
     @FXML
-    void przyciskWypozycz(ActionEvent event){
+    void przyciskWypozycz(ActionEvent event) {
         String id_ksiazki = idKsiazki.getText();
         String id_uzytkownika = idUzytkownika.getText();
 
-        String spr ="SELECT dostepnosc FROM KSIAZKA WHERE  id = '" + id_ksiazki + "'";
+
+        String spr = "SELECT dostepnosc FROM KSIAZKA WHERE  id = '" + id_ksiazki + "'";
         ResultSet sprawdzenie = DatabaseControll.execQuery(spr);
         String bospr = null;
         try {
-            while(sprawdzenie.next()) {
+            while (sprawdzenie.next()) {
                 bospr = sprawdzenie.getString("dostepnosc");
                 Boolean bospr2 = Boolean.valueOf(bospr);
-                if(bospr2){
+                if (bospr2) {
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.setTitle("Potwierdź poprawność danych");
                     alert.setHeaderText(null);
                     alert.setContentText("Czy napewno chcesz wypożyczyć książkę \n" + nazwaKsiazki.getText() + " dla " + imieU.getText() + " " + nazwiskoU.getText() + " ?");
-                    alert.showAndWait();
 
                     Optional<ButtonType> response = alert.showAndWait();
-                    if(response.get() == ButtonType.OK) {
+                    if (response.get() == ButtonType.OK) {
 
                         String qu = "INSERT INTO WYPOZYCZENIA(ksiazka_id, uzytkownik_id) VALUES ("
                                 + "'" + id_ksiazki + "',"
@@ -409,12 +425,32 @@ public class GlowneOkno implements Initializable {
                         System.out.println(qu + " i " + qu2);
 
 
-                        if(DatabaseControll.execAction(qu)&&DatabaseControll.execAction(qu2)){
-                            Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
-                            alert2.setTitle("Potwierdzenie");
-                            alert2.setHeaderText("Dodawanie wypożyczenia");
-                            alert2.setContentText("Wszystkie dane dotyczące wypożyczenia zostały poprawnie dodane do bazy danych");
-                            alert2.showAndWait();
+                        if (DatabaseControll.execAction(qu) && DatabaseControll.execAction(qu2)) {
+
+                            String qu3 = "SELECT czas FROM WYPOZYCZENIA WHERE ksiazka_id = '" + id_ksiazki + "'";
+                            ResultSet rs3 = DatabaseControll.execQuery(qu3);
+
+                            try {
+                                while (rs3.next()) {
+                                    Timestamp pczas = rs3.getTimestamp("czas");
+                                    Calendar cal = Calendar.getInstance();
+                                    cal.setTimeInMillis(pczas.getTime());
+
+                                    cal.add(Calendar.DAY_OF_MONTH, 30);
+                                    pczas = new Timestamp(cal.getTime().getTime());
+
+                                    String qu4 = "UPDATE WYPOZYCZENIA SET czas_oddania = '" + pczas + "' WHERE ksiazka_id = '" + id_ksiazki + "'";
+                                    DatabaseControll.execAction(qu4);
+                                    System.out.println(qu4);
+                                    Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                                    alert2.setTitle("Potwierdzenie");
+                                    alert2.setHeaderText("Dodawanie wypożyczenia");
+                                    alert2.setContentText("Wszystkie dane dotyczące wypożyczenia zostały poprawnie dodane do bazy danych");
+                                    alert2.showAndWait();
+                                }
+                                } catch (SQLException e){
+                                e.printStackTrace();
+                            }
                         } else {
                             Alert alert2 = new Alert(Alert.AlertType.ERROR);
                             alert2.setTitle("Niepowodzenie");
@@ -441,34 +477,42 @@ public class GlowneOkno implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
     void zaladujInformacje(KeyEvent event) {
         ObservableList<String> wypozyczenieInformacje = FXCollections.observableArrayList();
-        SimpleDateFormat dfDate  = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        String data="";
+        SimpleDateFormat dfDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        String data = "";
+        String data2 = "";
         Calendar c = Calendar.getInstance();
+        sprWczytaniaKsiazki = false;
 
         String id_ksiazki = idKsiazki2.getText();
         String qu = "SELECT * FROM WYPOZYCZENIA WHERE ksiazka_id = '" + id_ksiazki + "'";
         ResultSet rs = DatabaseControll.execQuery(qu);
-        try{
-            while (rs.next()){
+        try {
+            while (rs.next()) {
                 String pid_ksiazki = id_ksiazki;
                 String pid_uzytkownika = rs.getString("uzytkownik_id");
                 Timestamp pczas = rs.getTimestamp("czas");
-
+                Timestamp pczas_odd = rs.getTimestamp("czas_oddania");
                 Integer podnowienia = rs.getInt("odnowienia");
-                data=dfDate.format(pczas);
+                Integer pid_cena = rs.getInt("cena");
 
-                wypozyczenieInformacje.add("Data wypożyczenia:" + data);
-                wypozyczenieInformacje.add("Ilość odnowień:" + podnowienia);
+                data = dfDate.format(pczas);
+                data2 = dfDate.format(pczas_odd);
+
+                wypozyczenieInformacje.add("Data wypożyczenia: " + data);
+                wypozyczenieInformacje.add("Data oddania: " + data2);
+                wypozyczenieInformacje.add("Ilość odnowień: " + podnowienia);
+                wypozyczenieInformacje.add("Dodatkowa zapłata: " + pid_cena + "zł");
 
                 wypozyczenieInformacje.add("");
                 wypozyczenieInformacje.add("");
                 wypozyczenieInformacje.add("Informacje o książce:");
                 qu = "SELECT * FROM KSIAZKA WHERE id = '" + pid_ksiazki + "'";
                 ResultSet rs2 = DatabaseControll.execQuery(qu);
-                while(rs2.next()){
+                while (rs2.next()) {
                     wypozyczenieInformacje.add("Tytul książki: " + rs2.getString("tytul"));
                     wypozyczenieInformacje.add("Autor książki: " + rs2.getString("autor"));
                     wypozyczenieInformacje.add("Wydawca książki: " + rs2.getString("wydawca"));
@@ -479,18 +523,108 @@ public class GlowneOkno implements Initializable {
                 wypozyczenieInformacje.add("Informacje o użytkowniku:");
                 qu = "SELECT * FROM UZYTKOWNIK WHERE id = '" + pid_uzytkownika + "'";
                 ResultSet rs3 = DatabaseControll.execQuery(qu);
-                while(rs3.next()){
+                while (rs3.next()) {
                     wypozyczenieInformacje.add("Imie: " + rs3.getString("imie"));
                     wypozyczenieInformacje.add("Nazwisko: " + rs3.getString("nazwisko"));
                     wypozyczenieInformacje.add("Login: " + rs3.getString("login"));
                     wypozyczenieInformacje.add("Email: " + rs3.getString("email"));
                 }
-
+                sprWczytaniaKsiazki = true;
             }
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         listaInformacji.getItems().setAll(wypozyczenieInformacje);
+    }
+
+    @FXML
+    void przycyskOddaj(ActionEvent event) {
+        String id_ksiazki = idKsiazki2.getText();
+        if (!sprWczytaniaKsiazki) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Niepowodzenie");
+            alert.setHeaderText("Oddanie Książki");
+            alert.setContentText("Najpierw załaduj dane o książce");
+            alert.showAndWait();
+            return;
+        }
+        String qu = "DELETE FROM WYPOZYCZENIA WHERE ksiazka_id = '" + id_ksiazki + "'";
+        String qu2 = "UPDATE KSIAZKA SET dostepnosc = TRUE WHERE id = '" + id_ksiazki + "'";
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Potwierdź poprawność danych");
+        alert.setHeaderText(null);
+        alert.setContentText("Czy napewno chcesz oddać książkę \n" + nazwaKsiazki.getText() + " ?");
+
+        Optional<ButtonType> response = alert.showAndWait();
+        if (response.get() == ButtonType.OK) {
+            if (DatabaseControll.execAction(qu) && DatabaseControll.execAction(qu2)) {
+                Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                alert2.setTitle("Potwierdzenie");
+                alert2.setHeaderText("Oddanie Książki");
+                alert2.setContentText("Książka została poprawnie dodana");
+                alert2.showAndWait();
+            } else {
+                Alert alert2 = new Alert(Alert.AlertType.ERROR);
+                alert2.setTitle("Niepowodzenie");
+                alert2.setHeaderText("Oddanie Książki");
+                alert2.setContentText("Książka nie została pomyślnie oddana");
+                alert2.showAndWait();
+            }
+        }
+    }
+
+    @FXML
+    void przyciskOdnow(ActionEvent event) {
+
+        if (!sprWczytaniaKsiazki) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Niepowodzenie");
+            alert.setHeaderText("Przedłużenie Terminu");
+            alert.setContentText("Najpierw załaduj dane o książce");
+            alert.showAndWait();
+            return;
+        }
+
+        String id_ksiazki = idKsiazki2.getText();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Potwierdź poprawność danych");
+        alert.setHeaderText(null);
+        alert.setContentText("Czy napewno chcesz przedłużyć termin oddania książki \n" + nazwaKsiazki.getText() + " ?");
+
+        Optional<ButtonType> response = alert.showAndWait();
+        if (response.get() == ButtonType.OK) {
+            String qu = "UPDATE WYPOZYCZENIA SET czas = CURRENT_TIMESTAMP, cena = cena+10, odnowienia = odnowienia+1 WHERE ksiazka_id = '" + id_ksiazki + "'";
+            if (DatabaseControll.execAction(qu)) {
+                String qu3 = "SELECT czas FROM WYPOZYCZENIA WHERE ksiazka_id = '" + id_ksiazki + "'";
+                ResultSet rs = DatabaseControll.execQuery(qu3);
+                try {
+                    while (rs.next()) {
+                        Timestamp pczas = rs.getTimestamp("czas");
+                        Calendar cal = Calendar.getInstance();
+                        cal.setTimeInMillis(pczas.getTime());
+
+                        cal.add(Calendar.DAY_OF_MONTH, 7);
+                        pczas = new Timestamp(cal.getTime().getTime());
+
+                        String qu4 = "UPDATE WYPOZYCZENIA SET czas_oddania = '" + pczas + "' WHERE ksiazka_id = '" + id_ksiazki + "'";
+                        DatabaseControll.execAction(qu4);
+                        Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                        alert2.setTitle("Potwierdzenie");
+                        alert2.setHeaderText("Przedłużenie Terminu");
+                        alert2.setContentText("Termin oddania książki został zwiększony o kolejny tydzień");
+                        alert2.showAndWait();
+                    }
+                } catch (SQLException e){
+                    e.printStackTrace();
+                }
+            } else {
+                Alert alert2 = new Alert(Alert.AlertType.ERROR);
+                alert2.setTitle("Niepowodzenie");
+                alert2.setHeaderText("Przedłużenie Terminu");
+                alert2.setContentText("Termin oddania nie został przedłużony");
+                alert2.showAndWait();
+            }
+        }
     }
 
 }

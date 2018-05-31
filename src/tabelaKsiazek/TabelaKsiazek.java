@@ -2,6 +2,7 @@ package tabelaKsiazek;
 
 import bazadanych.DatabaseControll;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -32,6 +33,8 @@ public class TabelaKsiazek implements Initializable {
     public TableColumn<ksiazki, String> wydawcaTab;
     @FXML
     public TableColumn<ksiazki, Boolean> dostepnaTab;
+    @FXML
+    public TableColumn<ksiazki, Integer> cenaTab;
 
 
     @Override
@@ -51,8 +54,9 @@ public class TabelaKsiazek implements Initializable {
                 String autor_pob = rs.getString("autor");
                 String wydawca_pob = rs.getString("wydawca");
                 Boolean dostepnosc = rs.getBoolean("dostepnosc");
+                Integer cena_pob = rs.getInt("cena");
 
-                list.add(new ksiazki(id_pob, tytul_pob, autor_pob, wydawca_pob, dostepnosc));
+                list.add(new ksiazki(id_pob, tytul_pob, autor_pob, wydawca_pob, dostepnosc, cena_pob));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -66,6 +70,7 @@ public class TabelaKsiazek implements Initializable {
         autorTab.setCellValueFactory(new PropertyValueFactory<>("autor"));
         wydawcaTab.setCellValueFactory(new PropertyValueFactory<>("wydawca"));
         dostepnaTab.setCellValueFactory(new PropertyValueFactory<>("dostepnosc"));
+        cenaTab.setCellValueFactory(new PropertyValueFactory<>("cena"));
     }
 
     public static class ksiazki {
@@ -74,14 +79,15 @@ public class TabelaKsiazek implements Initializable {
         private final SimpleStringProperty autor;
         private final SimpleStringProperty wydawca;
         private final SimpleBooleanProperty dostepnosc;
+        private final SimpleIntegerProperty cena;
 
-        ksiazki(String id, String tytul, String autor, String wydawca, Boolean dostepnosc) {
+        ksiazki(String id, String tytul, String autor, String wydawca, Boolean dostepnosc, Integer cena) {
             this.id = new SimpleStringProperty(id);
             this.tytul = new SimpleStringProperty(tytul);
             this.autor = new SimpleStringProperty(autor);
             this.wydawca = new SimpleStringProperty(wydawca);
             this.dostepnosc = new SimpleBooleanProperty(dostepnosc);
-
+            this.cena = new SimpleIntegerProperty(cena);
         }
 
         public String getId() {
@@ -103,5 +109,7 @@ public class TabelaKsiazek implements Initializable {
         public boolean isDostepnosc() {
             return dostepnosc.get();
         }
+
+        public Integer getCena() { return cena.get(); }
     }
 }

@@ -13,6 +13,7 @@
             <TableColumn fx:id="autorTab" prefWidth="75.0" text="Autor" />
             <TableColumn fx:id="wydawcaTab" prefWidth="75.0" text="Wydawca" />
             <TableColumn fx:id="dostepnaTab" prefWidth="75.0" text="Dostępna" />
+            <TableColumn fx:id="cenaTab" prefWidth="75.0" text="Cena" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

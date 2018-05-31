@@ -27,6 +27,8 @@ public class Nowaksiazka implements Initializable {
     @FXML
     private JFXTextField wydawca;
     @FXML
+    private JFXTextField cena;
+    @FXML
     private JFXButton zapiszbutton;
     @FXML
     private JFXButton anulujbutton;
@@ -45,8 +47,9 @@ public class Nowaksiazka implements Initializable {
         String ksiazkatytul = tytul.getText();
         String ksiazkaautor = autor.getText();
         String ksiazkawydawca = wydawca.getText();
+        String ksiazkacena = cena.getText();
 
-        if (ksiazkaID.isEmpty() || ksiazkaautor.isEmpty() || ksiazkatytul.isEmpty() || ksiazkawydawca.isEmpty()) {
+        if (ksiazkaID.isEmpty() || ksiazkaautor.isEmpty() || ksiazkatytul.isEmpty() || ksiazkawydawca.isEmpty() || ksiazkacena.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Błąd Wprowadzania");
             alert.setHeaderText("Dodawanie książki");
@@ -61,7 +64,8 @@ public class Nowaksiazka implements Initializable {
                 "'" + ksiazkatytul + "'," +
                 "'" + ksiazkaautor + "'," +
                 "'" + ksiazkawydawca + "'," +
-                "'" + true + "'" +
+                "'" + true + "'," +
+                "" + ksiazkacena + "" +
                 ")";
         System.out.println(qu);
         if (DatabaseControll.execAction(qu)) {

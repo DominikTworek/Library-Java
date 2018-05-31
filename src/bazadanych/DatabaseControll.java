@@ -41,9 +41,11 @@ public class DatabaseControll {
             ResultSet tabele = dbm.getTables(null, null, "KSIAZKA", null);
 
             if (tabele.next()) {
+                //boolean b = stmt.execute("DROP TABLE KSIAZKA");
+                //boolean b = stmt.execute("ALTER TABLE KSIAZKA ADD cena Integer");
                 System.out.println("Tabela KSIAZKA już istnieje. Gotowy do pracy.");
             } else {
-                boolean b = stmt.execute("CREATE TABLE KSIAZKA (id VARCHAR (200) PRIMARY KEY,tytul VARCHAR (200),autor VARCHAR (200),wydawca VARCHAR (200),dostepnosc boolean default true)");
+                boolean b = stmt.execute("CREATE TABLE KSIAZKA (id VARCHAR (200) PRIMARY KEY,tytul VARCHAR (200),autor VARCHAR (200),wydawca VARCHAR (200),dostepnosc boolean default true, cena INTEGER)");
             }
 
         } catch (SQLException e) {
@@ -62,8 +64,8 @@ public class DatabaseControll {
                 //boolean b = stmt.execute("DROP TABLE UZYTKOWNIK");
                 System.out.println("Tabela uzytkownik już istnieje. Gotowy do pracy.");
             } else {
-                boolean b = stmt.execute("CREATE TABLE UZYTKOWNIK (id VARCHAR(200) PRIMARY KEY, imie VARCHAR(200),nazwisko VARCHAR(200),login VARCHAR (200),haslo VARCHAR(200),email VARCHAR(200), rola VARCHAR(200))");
-                String qu = "INSERT INTO UZYTKOWNIK VALUES ('1', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', '2')";
+                boolean b = stmt.execute("CREATE TABLE UZYTKOWNIK (id VARCHAR(200) PRIMARY KEY, imie VARCHAR(200),nazwisko VARCHAR(200),login VARCHAR (200),haslo VARCHAR(200),email VARCHAR(200), rola VARCHAR(200), kara INTEGER DEFAULT 0)");
+                String qu = "INSERT INTO UZYTKOWNIK VALUES ('1', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', '2', 0)";
                 DatabaseControll.execAction(qu);
             }
 
@@ -81,11 +83,10 @@ public class DatabaseControll {
 
             if (tabelewyporzyczenia.next()) {
                 //boolean b = stmt.execute("DROP TABLE WYPOZYCZENIA");
+                //boolean b = stmt.execute("ALTER TABLE WYPOZYCZENIA ADD cena INTEGER");
                 System.out.println("Tabela WYPOZYCZENIA już istnieje. Gotowy do pracy.");
             } else {
-                boolean b = stmt.execute("CREATE TABLE WYPOZYCZENIA (ksiazka_id VARCHAR(200), uzytkownik_id VARCHAR(200), czas TIMESTAMP DEFAULT CURRENT_TIMESTAMP, odnowienia INTEGER DEFAULT 0, FOREIGN KEY (ksiazka_id) REFERENCES KSIAZKA(id), FOREIGN KEY (uzytkownik_id) REFERENCES UZYTKOWNIK(id))");
-                String qu = "INSERT INTO UZYTKOWNIK VALUES ('1', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', '2')";
-                DatabaseControll.execAction(qu);
+                boolean b = stmt.execute("CREATE TABLE WYPOZYCZENIA (ksiazka_id VARCHAR(200), uzytkownik_id VARCHAR(200), czas TIMESTAMP DEFAULT CURRENT_TIMESTAMP, czas_oddania TIMESTAMP DEFAULT CURRENT_TIMESTAMP,cena INTEGER DEFAULT 0, odnowienia INTEGER DEFAULT 0, FOREIGN KEY (ksiazka_id) REFERENCES KSIAZKA(id), FOREIGN KEY (uzytkownik_id) REFERENCES UZYTKOWNIK(id))");
             }
 
         } catch (SQLException e) {

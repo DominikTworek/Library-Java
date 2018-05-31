@@ -46,6 +46,9 @@ public class TabelaUzytkownikow implements Initializable {
     @FXML
     private TableColumn<uzytkownicy, Integer> rolaTab;
 
+    @FXML
+    private TableColumn<uzytkownicy, Integer> karaTab;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         czytanieUzytkownikow();
@@ -65,8 +68,9 @@ public class TabelaUzytkownikow implements Initializable {
                 String haslo_pob = rs.getString("haslo");
                 String email_pob = rs.getString("email");
                 Integer rola_pob = rs.getInt("rola");
+                Integer kara_pob = rs.getInt("kara");
 
-                list.add(new uzytkownicy(id_pob, imie_pob, nazwisko_pob, login_pob, haslo_pob, email_pob, rola_pob));
+                list.add(new uzytkownicy(id_pob, imie_pob, nazwisko_pob, login_pob, haslo_pob, email_pob, rola_pob, kara_pob));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -83,6 +87,7 @@ public class TabelaUzytkownikow implements Initializable {
         hasloTab.setCellValueFactory(new PropertyValueFactory<>("haslo"));
         emailTab.setCellValueFactory(new PropertyValueFactory<>("email"));
         rolaTab.setCellValueFactory(new PropertyValueFactory<>("rola"));
+        karaTab.setCellValueFactory(new PropertyValueFactory<>("kara"));
     }
 
     public static class uzytkownicy {
@@ -93,8 +98,9 @@ public class TabelaUzytkownikow implements Initializable {
         private final SimpleStringProperty haslo;
         private final SimpleStringProperty email;
         private final SimpleIntegerProperty rola;
+        private final SimpleIntegerProperty kara;
 
-        uzytkownicy(Integer id, String imie, String nazwisko, String login, String haslo, String email, Integer rola) {
+        uzytkownicy(Integer id, String imie, String nazwisko, String login, String haslo, String email, Integer rola, Integer kara) {
             this.id = new SimpleIntegerProperty(id);
             this.imie = new SimpleStringProperty(imie);
             this.nazwisko = new SimpleStringProperty(nazwisko);
@@ -102,6 +108,7 @@ public class TabelaUzytkownikow implements Initializable {
             this.haslo = new SimpleStringProperty(haslo);
             this.email = new SimpleStringProperty(email);
             this.rola = new SimpleIntegerProperty(rola);
+            this.kara = new SimpleIntegerProperty(kara);
 
         }
 
@@ -127,8 +134,10 @@ public class TabelaUzytkownikow implements Initializable {
             return email.get();
         }
 
-        public Integer getRola() {
-            return rola.get();
+        public Integer getRola() { return rola.get(); }
+
+        public Integer getKara() {
+            return kara.get();
         }
     }
 }
