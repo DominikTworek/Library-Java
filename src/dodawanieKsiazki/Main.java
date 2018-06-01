@@ -10,9 +10,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("nowaksiazka.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../logowanie/logowanieOkno.fxml"));
         primaryStage.setTitle("Projekt Java");
-        primaryStage.setScene(new Scene(root, 400, 275));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
