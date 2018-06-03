@@ -455,14 +455,14 @@ public class GlowneOkno implements Initializable {
                             Alert alert2 = new Alert(Alert.AlertType.ERROR);
                             alert2.setTitle("Niepowodzenie");
                             alert2.setHeaderText("Dodawanie wypożyczenia");
-                            alert2.setContentText("Dane nie zostały dodane do bazy danych(nieznany błąd). Spróbuj jeszcze raz.");
+                            alert2.setContentText("Ksiazka nie zostały dodane do bazy danych(nieznany błąd). Spróbuj jeszcze raz.");
                             alert2.showAndWait();
                         }
                     } else {
                         Alert alert2 = new Alert(Alert.AlertType.ERROR);
                         alert2.setTitle("Niepowodzenie");
                         alert2.setHeaderText("Dodawanie wypożyczenia");
-                        alert2.setContentText("Dane nie zostały dodane do bazy danych(nieznany błąd).Spróbuj jeszcze raz.");
+                        alert2.setContentText("Ksiazka nie zostały dodane do bazy danych(nieznany błąd).Spróbuj jeszcze raz.");
                         alert2.showAndWait();
                     }
                 } else {

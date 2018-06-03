@@ -75,7 +75,7 @@ public class LogowanieOkno implements Initializable {
                     String plogin = rs.getString("login");
                     String phaslo = rs.getString("haslo");
                     Integer prola = rs.getInt("rola");
-                    System.out.println(prola);
+                    System.out.println(plogin);
 
 
                     if(plogin.equals(logowanieLogin)){
@@ -84,6 +84,11 @@ public class LogowanieOkno implements Initializable {
                                 Stage logowanie_zamknij = (Stage) logowanieOkno.getScene().getWindow();
                                 logowanie_zamknij.close();
                                 zaladujOkno("../Glowne/GlowneOkno.fxml", "Okno Administracji");
+                            }
+                            else{
+                                Stage logowanie_zamknij = (Stage) logowanieOkno.getScene().getWindow();
+                                logowanie_zamknij.close();
+                                zaladujOkno("../Glowne/GlowneOkno.fxml", "Okno Użytkownika");
                             }
                         }
                         else {

@@ -9,9 +9,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+
 import java.net.URL;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
@@ -58,7 +57,6 @@ public class Nowaksiazka implements Initializable {
             return;
         }
 
-
         String qu = "INSERT INTO KSIAZKA VALUES (" +
                 "'" + ksiazkaID + "'," +
                 "'" + ksiazkatytul + "'," +
@@ -78,7 +76,7 @@ public class Nowaksiazka implements Initializable {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Niepowodzenie");
             alert.setHeaderText("Dodawanie książki");
-            alert.setContentText("Dane nie zostały dodane do bazy danych(nieznany błąd). Spróbuj jeszcze raz.");
+            alert.setContentText("Ksiazka nie zostały dodane do bazy danych(nieznany błąd). Spróbuj jeszcze raz.");
             alert.showAndWait();
         }
     }

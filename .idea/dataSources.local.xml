@@ -3,9 +3,6 @@
   <component name="dataSourceStorageLocal">
     <data-source name="baza" uuid="5c6cce76-63e1-4605-b627-cdba1134d603">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <secret-storage>master_key</secret-storage>
-      <first-sync>true</first-sync>
-      <introspection-schemas>*:*</introspection-schemas>
     </data-source>
   </component>
 </project>

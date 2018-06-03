@@ -1,6 +1,5 @@
 package rejestracja;
 
-import bazadanych.DatabaseControll;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -100,7 +99,7 @@ public class NowyUzytkownik implements Initializable {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Niepowodzenie");
                     alert.setHeaderText("Dodawanie użytkoniwka");
-                    alert.setContentText("Dane nie zostały dodane do bazy danych. Spróbuj jeszcze raz.");
+                    alert.setContentText("Ksiazka nie zostały dodane do bazy danych. Spróbuj jeszcze raz.");
                     alert.showAndWait();
                 }
             }

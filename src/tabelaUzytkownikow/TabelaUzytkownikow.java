@@ -5,17 +5,21 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
+import tabelaKsiazek.TabelaKsiazek;
 
 
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class TabelaUzytkownikow implements Initializable {
@@ -75,7 +79,7 @@ public class TabelaUzytkownikow implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        tabelaUzytkownikow.getItems().setAll(list);
+        tabelaUzytkownikow.setItems(list);
     }
 
 
@@ -138,6 +142,42 @@ public class TabelaUzytkownikow implements Initializable {
 
         public Integer getKara() {
             return kara.get();
+        }
+    }
+
+    @FXML
+    void usuwanie(ActionEvent event) {
+        uzytkownicy wybieranieDoUsuwania = tabelaUzytkownikow.getSelectionModel().getSelectedItem();
+        if (wybieranieDoUsuwania == null) {
+            return;
+        } else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Potwierdź usunięcie użytkownika");
+            alert.setHeaderText(null);
+            alert.setContentText("Czy napewno chcesz usunąć zaznaczonego użytkownika "+wybieranieDoUsuwania.getLogin()+ " ?");
+
+            Optional<ButtonType> response = alert.showAndWait();
+            if (response.get() == ButtonType.OK) {
+                String qu ="DELETE FROM UZYTKOWNIK WHERE id = '"+wybieranieDoUsuwania.getId()+"'";
+                if(DatabaseControll.execAction(qu)) {
+                    Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                    alert2.setTitle("Potwierdzenie usinięcie użytkownika");
+                    alert2.setHeaderText(null);
+                    alert2.setContentText("Użytkownik "+wybieranieDoUsuwania.getLogin()+" został usunięty");
+                    alert2.showAndWait();
+                    list.remove(wybieranieDoUsuwania);
+                }
+                else {
+                    Alert alert2 = new Alert(Alert.AlertType.ERROR);
+                    alert2.setTitle("Błąd Usuwania");
+                    alert2.setHeaderText(null);
+                    alert2.setContentText("Użytkownik "+wybieranieDoUsuwania.getLogin()+ " nie została usunięta");
+                    alert2.showAndWait();
+                }
+            }
+            else{
+                return;
+            }
         }
     }
 }
