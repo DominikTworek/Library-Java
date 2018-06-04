@@ -7,31 +7,31 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="rejestracja_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rejestracja.NowyUzytkownik">
+<AnchorPane fx:id="rejestracja_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="400.0" stylesheets="@../wyglad/glowne_ciemne.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rejestracja.NowyUzytkownik">
     <children>
-        <VBox prefHeight="256.0" prefWidth="405.0">
+        <VBox prefHeight="256.0" prefWidth="405.0" stylesheets="@../wyglad/glowne_ciemne.css">
             <children>
-                <JFXTextField fx:id="imie" prefHeight="26.0" prefWidth="590.0" promptText="Imie">
+                <JFXTextField fx:id="imie" blendMode="ADD" labelFloat="true" prefHeight="26.0" prefWidth="590.0" promptText="Imie" styleClass="tekst" stylesheets="@../wyglad/glowne_ciemne.css">
                     <VBox.margin>
                         <Insets left="10.0" right="10.0" top="20.0" />
                     </VBox.margin>
                 </JFXTextField>
-                <JFXTextField fx:id="nazwisko" layoutX="20.0" layoutY="30.0" prefHeight="26.0" prefWidth="590.0" promptText="Nazwisko">
+                <JFXTextField fx:id="nazwisko" blendMode="ADD" labelFloat="true" layoutX="20.0" layoutY="30.0" prefHeight="26.0" prefWidth="590.0" promptText="Nazwisko" styleClass="tekst" stylesheets="@../wyglad/glowne_ciemne.css">
                     <VBox.margin>
                         <Insets left="10.0" right="10.0" top="20.0" />
                     </VBox.margin>
                 </JFXTextField>
-                <JFXTextField fx:id="login" layoutX="20.0" layoutY="30.0" prefHeight="26.0" prefWidth="590.0" promptText="Login">
+                <JFXTextField fx:id="login" blendMode="ADD" labelFloat="true" layoutX="20.0" layoutY="30.0" prefHeight="26.0" prefWidth="590.0" promptText="Login" styleClass="tekst" stylesheets="@../wyglad/glowne_ciemne.css">
                     <VBox.margin>
                         <Insets left="10.0" right="10.0" top="20.0" />
                     </VBox.margin>
                 </JFXTextField>
-                <JFXTextField fx:id="haslo" layoutX="10.0" layoutY="56.0" prefHeight="26.0" prefWidth="590.0" promptText="Hasło">
+                <JFXTextField fx:id="haslo" blendMode="ADD" labelFloat="true" layoutX="10.0" layoutY="56.0" prefHeight="26.0" prefWidth="590.0" promptText="Hasło" styleClass="tekst" stylesheets="@../wyglad/glowne_ciemne.css">
                     <VBox.margin>
                         <Insets left="10.0" right="10.0" top="20.0" />
                     </VBox.margin>
                 </JFXTextField>
-            <JFXTextField fx:id="email" prefHeight="14.0" prefWidth="400.0" promptText="Email">
+            <JFXTextField fx:id="email" blendMode="ADD" labelFloat="true" prefHeight="14.0" prefWidth="400.0" promptText="Email" styleClass="tekst" stylesheets="@../wyglad/glowne_ciemne.css">
                <VBox.margin>
                   <Insets left="10.0" right="10.0" top="20.0" />
                </VBox.margin>
@@ -40,8 +40,14 @@
         </VBox>
         <HBox layoutY="285.0" prefHeight="47.0" prefWidth="405.0">
             <children>
-                <JFXButton fx:id="zapiszbutton" onAction="#dodajuzytkownika" prefHeight="45.0" prefWidth="200.0" styleClass="jfx-button" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Zapisz" />
-                <JFXButton fx:id="anulujbutton" onAction="#anuluj" prefHeight="45.0" prefWidth="200.0" styleClass="jfx-button" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Anuluj" />
+                <JFXButton fx:id="zapiszbutton" onAction="#dodajuzytkownika" prefHeight="31.0" prefWidth="106.0" styleClass="login-przycisk" stylesheets="@../wyglad/glowne_ciemne.css" text="Zapisz" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin></JFXButton>
+                <JFXButton fx:id="anulujbutton" onAction="#anuluj" prefHeight="32.0" prefWidth="96.0" styleClass="login-przycisk" stylesheets="@../wyglad/glowne_ciemne.css" text="Anuluj">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></JFXButton>
             </children></HBox>
     </children>
 </AnchorPane>

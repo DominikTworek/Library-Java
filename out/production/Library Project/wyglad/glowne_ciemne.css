@@ -1,0 +1,30 @@
+
+* {
+    -fx-glowny: #212121;
+    -fx-drugi: #00B1C7;
+    -fx-glownytekst: #BABABA;
+    -fx-blad: #ba0e1b;
+
+}
+
+.root{
+    -fx-background-color: -fx-glowny;
+}
+
+.tekst{
+    -fx-text-fill: -fx-glownytekst;
+    -jfx-focus-color: -fx-drugi;
+}
+
+.login-przycisk{
+    -fx-border-color: -fx-drugi;
+    -fx-text-fill: -fx-glownytekst;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.login-przycisk:hover{
+    -fx-border-color: -fx-drugi;
+    -fx-background-color: -fx-drugi;
+    -fx-text-fill: -fx-glowny;
+}

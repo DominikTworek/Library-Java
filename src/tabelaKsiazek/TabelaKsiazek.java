@@ -170,7 +170,7 @@ public class TabelaKsiazek implements Initializable {
                 "wydawca = '" + wydawcap + "', " +
                 "cena = " + cenap + " " +
                 "WHERE id = '" + pobieranieDanych.getId() + "'";
-        System.out.println(qu);
+
 
         if (pobieranieDanych.isDostepnosc()) {
             if (DatabaseControll.execAction(qu)) {

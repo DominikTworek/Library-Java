@@ -4,18 +4,14 @@
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="logowanieOkno" prefHeight="313.0" prefWidth="288.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logowanie.LogowanieOkno">
+<AnchorPane fx:id="logowanieOkno" prefHeight="313.0" prefWidth="288.0" stylesheets="@../wyglad/glowne_ciemne.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logowanie.LogowanieOkno">
    <children>
-      <Label fx:id="tytulLogowanie" alignment="CENTER" prefHeight="44.0" prefWidth="600.0" style="-fx-background-color: BLACK; -fx-text-fill: WHITE;" text="Biblioteka Logowanie" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <JFXTextField fx:id="login" blendMode="HARD_LIGHT" labelFloat="true" layoutY="85.0" prefHeight="25.0" prefWidth="289.0" promptText="Wpisz swój login">
+      <JFXTextField fx:id="login" blendMode="ADD" labelFloat="true" layoutY="98.0" prefHeight="25.0" prefWidth="289.0" promptText="Wpisz swój login" styleClass="tekst" stylesheets="@../wyglad/glowne_ciemne.css">
          <padding>
             <Insets left="15.0" right="15.0" />
          </padding>
@@ -23,7 +19,7 @@
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField fx:id="haslo" blendMode="HARD_LIGHT" labelFloat="true" layoutY="145.0" prefHeight="25.0" prefWidth="289.0" promptText="Wpisz swoje hasło">
+      <JFXPasswordField fx:id="haslo" blendMode="ADD" labelFloat="true" layoutY="158.0" prefHeight="25.0" prefWidth="289.0" promptText="Wpisz swoje hasło" styleClass="tekst" stylesheets="@../wyglad/glowne_ciemne.css">
          <padding>
             <Insets left="15.0" right="15.0" />
          </padding>
@@ -31,7 +27,12 @@
             <Font size="16.0" />
          </font>
       </JFXPasswordField>
-      <JFXButton layoutX="47.0" layoutY="246.0" onAction="#przyciskZaloguj" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Zaloguj" />
-      <JFXButton layoutX="179.0" layoutY="246.0" onAction="#przyciskWyjdz" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Wyjdź" />
+      <JFXButton layoutX="37.0" layoutY="236.0" onAction="#przyciskZaloguj" prefHeight="35.0" prefWidth="72.0" styleClass="login-przycisk" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Zaloguj" />
+      <JFXButton layoutX="180.0" layoutY="236.0" onAction="#przyciskWyjdz" prefHeight="35.0" prefWidth="72.0" styleClass="login-przycisk" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Wyjdź" />
+      <ImageView fitHeight="57.0" fitWidth="55.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="ikona">
+         <image>
+            <Image url="@../wyglad/reading.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

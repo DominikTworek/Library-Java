@@ -52,20 +52,16 @@ public class LogowanieOkno implements Initializable {
 
     @FXML
     void przyciskZaloguj(ActionEvent event) {
-        tytulLogowanie.setText("Biblioteka Logowanie");
         String logowanieLogin = login.getText();
         String logowanieHaslo = haslo.getText();
         if (logowanieLogin.isEmpty() && logowanieHaslo.isEmpty()) {
-            tytulLogowanie.setText("Wpisz najpierw login i hasło");
-            tytulLogowanie.setStyle("-fx-text-fill: red; -fx-background-color: black;");
+
         }
         else if(logowanieLogin.isEmpty()){
-            tytulLogowanie.setText("Wpisz najpierw login");
-            tytulLogowanie.setStyle("-fx-text-fill: red; -fx-background-color: black;");
+
         }
         else if(logowanieHaslo.isEmpty()){
-            tytulLogowanie.setText("Wpisz najpierw haslo");
-            tytulLogowanie.setStyle("-fx-text-fill: red; -fx-background-color: black;");
+
         }
         else{
             String qu = "SELECT * FROM UZYTKOWNIK";
@@ -92,13 +88,11 @@ public class LogowanieOkno implements Initializable {
                             }
                         }
                         else {
-                            tytulLogowanie.setText("Nieprawdiłowe hasło");
-                            tytulLogowanie.setStyle("-fx-text-fill: red; -fx-background-color: black;");
+
                         }
                     }
                     else{
-                        tytulLogowanie.setText("Nieprawdiłowy login");
-                        tytulLogowanie.setStyle("-fx-text-fill: red; -fx-background-color: black;");
+
                     }
 
                 }

@@ -1,6 +1,7 @@
 package tabelaUzytkownikow;
 
 import bazadanych.DatabaseControll;
+import com.jfoenix.controls.JFXTextField;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -13,6 +14,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import tabelaKsiazek.TabelaKsiazek;
 
 
@@ -53,13 +55,34 @@ public class TabelaUzytkownikow implements Initializable {
     @FXML
     private TableColumn<uzytkownicy, Integer> karaTab;
 
+    @FXML
+    private AnchorPane edytowanie;
+
+    @FXML
+    private JFXTextField imie;
+
+    @FXML
+    private JFXTextField nazwisko;
+
+    @FXML
+    private JFXTextField email;
+
+    @FXML
+    private JFXTextField rola;
+
+    @FXML
+    private JFXTextField kara;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         czytanieUzytkownikow();
-        initKsiaz();
+        initUzyt();
+        edytowanie.setVisible(false);
+
     }
 
     private void czytanieUzytkownikow() {
+        list.clear();
         DatabaseControll odczyt = DatabaseControll.getInstance();
         String qu = "SELECT * FROM UZYTKOWNIK";
         ResultSet rs = odczyt.execQuery(qu);
@@ -83,7 +106,7 @@ public class TabelaUzytkownikow implements Initializable {
     }
 
 
-    private void initKsiaz() {
+    private void initUzyt() {
         idTab.setCellValueFactory(new PropertyValueFactory<>("id"));
         imieTab.setCellValueFactory(new PropertyValueFactory<>("imie"));
         nazwiskoTab.setCellValueFactory(new PropertyValueFactory<>("nazwisko"));
@@ -144,6 +167,69 @@ public class TabelaUzytkownikow implements Initializable {
             return kara.get();
         }
     }
+    @FXML
+    public void aktualizuj(ActionEvent event) {
+        String imiep = imie.getText();
+        String nazwiskop = nazwisko.getText();
+        String emailp = email.getText();
+        String rolap = rola.getText();
+        String karap = kara.getText();
+        uzytkownicy pobieranieDanych = tabelaUzytkownikow.getSelectionModel().getSelectedItem();
+
+        String qu = "UPDATE UZYTKOWNIK SET " +
+                "imie = '" + imiep + "', " +
+                "nazwisko ='" + nazwiskop + "'," +
+                "email = '" + emailp + "', " +
+                "rola = '" + rolap + "', " +
+                "kara = " + karap + " " +
+                "WHERE id = '" + pobieranieDanych.getId() + "'";
+
+        if(DatabaseControll.execAction(qu)){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Potwierdzenie");
+            alert.setHeaderText("Edycja Użytkownika");
+            alert.setContentText("Wszystkie dane dotyczące użytkownika zostały poprawnie dodane do bazy danych");
+            alert.showAndWait();
+            czytanieUzytkownikow();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Niepowodzenie");
+            alert.setHeaderText("Edycja Użytkownika");
+            alert.setContentText("Użytkownik nie został dodany do bazy danych. Spróbuj jeszcze raz.");
+            alert.showAndWait();
+        }
+
+
+    }
+
+    @FXML
+    public void anuluj(ActionEvent event) {
+        edytowanie.setVisible(false);
+        edytowanie.setDisable(true);
+        tabelaUzytkownikow.setVisible(true);
+        tabelaUzytkownikow.setDisable(false);
+    }
+
+    @FXML
+    void edytowanie(ActionEvent event) {
+        uzytkownicy wybieranieDoUsuwania = tabelaUzytkownikow.getSelectionModel().getSelectedItem();
+        if (wybieranieDoUsuwania == null) {
+            return;
+        } else {
+            edytowanie.setDisable(false);
+            edytowanie.setVisible(true);
+            tabelaUzytkownikow.setDisable(true);
+            tabelaUzytkownikow.setVisible(false);
+            uzytkownicy pobieranieDoEdycji = tabelaUzytkownikow.getSelectionModel().getSelectedItem();
+            imie.setText(pobieranieDoEdycji.getImie());
+            nazwisko.setText(pobieranieDoEdycji.getNazwisko());
+            email.setText(pobieranieDoEdycji.getEmail());
+            rola.setText(String.valueOf(pobieranieDoEdycji.getRola()));
+            kara.setText(String.valueOf(pobieranieDoEdycji.getKara()));
+        }
+
+    }
+
 
     @FXML
     void usuwanie(ActionEvent event) {
