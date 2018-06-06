@@ -195,7 +195,7 @@
                                           </HBox>
                                        </bottom>
                                        <center>
-                                          <HBox alignment="CENTER" prefHeight="318.0" prefWidth="1001.0" BorderPane.alignment="CENTER">
+                                          <HBox fx:id="tablicaInformacji" alignment="CENTER" prefHeight="318.0" prefWidth="1001.0" BorderPane.alignment="CENTER">
                                              <children>
                                                 <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="210.0" styleClass="styl-informacji" stylesheets="@../wyglad/glowne_ciemne.css">
                                                    <HBox.margin>

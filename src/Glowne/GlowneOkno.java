@@ -10,12 +10,14 @@ import com.jfoenix.effects.JFXDepthManager;
 
 import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 import javafx.animation.FadeTransition;
+import javafx.animation.ScaleTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 import javafx.event.Event;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -104,6 +106,8 @@ public class GlowneOkno implements Initializable {
     @FXML
     private JFXTextField idKsiazki2;
 
+    @FXML
+    private HBox tablicaInformacji;
 
     @FXML
     private Text infoTytul;
@@ -186,7 +190,29 @@ public class GlowneOkno implements Initializable {
     }
 
 
-
+    void animacje_informacji(){
+        ScaleTransition fadeTransition = new ScaleTransition();
+        fadeTransition.setDuration(Duration.millis(300));
+        fadeTransition.setNode(tablicaInformacji);
+        fadeTransition.setFromX(1);
+        fadeTransition.setToX(0);
+        fadeTransition.setFromZ(1);
+        fadeTransition.setToZ(0);
+        fadeTransition.play();
+        fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ScaleTransition fadeTransition2 = new ScaleTransition();
+                fadeTransition2.setDuration(Duration.millis(300));
+                fadeTransition2.setNode(tablicaInformacji);
+                fadeTransition2.setFromX(0);
+                fadeTransition2.setToX(1);
+                fadeTransition2.setFromZ(0);
+                fadeTransition2.setToZ(1);
+                fadeTransition2.play();
+            }
+        });
+    }
 
 
 
@@ -456,6 +482,7 @@ public class GlowneOkno implements Initializable {
         ResultSet rs = DatabaseControll.execQuery(qu);
         try {
             while (rs.next()) {
+                animacje_informacji();
                 String pid_ksiazki = rs.getString("ksiazka_id");
                 String pid_uzytkownika = rs.getString("uzytkownik_id");
                 Timestamp pczas = rs.getTimestamp("czas");
@@ -468,7 +495,7 @@ public class GlowneOkno implements Initializable {
 
                 infoDataWyp.setText(data);
                 infoDataOdd.setText(data2);
-                infoOdnowienia.setText(String.valueOf(podnowienia));
+                infoOdnowienia.setText("Ilość Odnowień: " + String.valueOf(podnowienia));
                 infoDodatkowaOplata.setText(String.valueOf(pid_cena)+ " zł");
 
 
@@ -478,7 +505,7 @@ public class GlowneOkno implements Initializable {
                     infoTytul.setText(rs2.getString("tytul"));
                     infoAutor.setText(rs2.getString("autor"));
                     infoWydawca.setText(rs2.getString("wydawca"));
-                    infoIdKsiazki.setText(rs2.getString("id"));
+                    infoIdKsiazki.setText("Id Książki: " +rs2.getString("id"));
                 }
 
                 qu = "SELECT * FROM UZYTKOWNIK WHERE id = '" + pid_uzytkownika + "'";
@@ -487,7 +514,7 @@ public class GlowneOkno implements Initializable {
                     infoImie.setText(rs3.getString("imie"));
                     infoNazwisko.setText(rs3.getString("nazwisko"));
                     infoEmail.setText(rs3.getString("email"));
-                    infoIdUzytkownika.setText(rs3.getString("id"));
+                    infoIdUzytkownika.setText("Id Użytkownika: " +rs3.getString("id"));
                 }
                 sprWczytaniaKsiazki = true;
             }
@@ -503,11 +530,26 @@ public class GlowneOkno implements Initializable {
             infoDataOdd.setText("Data Oddania");
             infoDataWyp.setText("Data Wypożyczenia");
             infoOdnowienia.setText("Ilość Odnowień");
+            infoTytul.setText("Tytuł Książki");
+            infoAutor.setText("Autor Książki");
+            infoWydawca.setText("Wydawca Książki");
+            infoIdUzytkownika.setText("Id Uzytkownika");
+            infoIdKsiazki.setText("Id Książki");
+            animacje_informacji();
+        }
+        if(!sprWczytaniaKsiazki){
+            infoImie.setText("Imie");
+            infoNazwisko.setText("Nazwisko");
+            infoEmail.setText("Email");
+            infoDataOdd.setText("Data Oddania");
+            infoDataWyp.setText("Data Wypożyczenia");
+            infoOdnowienia.setText("Ilość Odnowień");
             infoTytul.setText("Tytuł");
             infoAutor.setText("Autor");
             infoWydawca.setText("Wydawca");
             infoIdUzytkownika.setText("Id Uzytkownika");
             infoIdKsiazki.setText("Id Książki");
+            animacje_informacji();
         }
     }
 
