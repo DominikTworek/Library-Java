@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="375.0" prefWidth="114.0" styleClass="root" stylesheets="@../wyglad/glowne_ciemne.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="narzedzia.Narzedzia">
+   <children>
+      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#zaladujDodajKsiazke" prefHeight="400.0" prefWidth="151.0" styleClass="narzedzia-button" stylesheets="@../wyglad/glowne_ciemne.css" text="Dodaj Książkę">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="imageview">
+               <image>
+                  <Image url="@../wyglad/book.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="57.0" mnemonicParsing="false" onAction="#zaladujRejestracje" prefHeight="400.0" prefWidth="151.0" styleClass="narzedzia-button" stylesheets="@../wyglad/glowne_ciemne.css" text="Nowy Użytkownik">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="imageview">
+               <image>
+                  <Image url="@../wyglad/study.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#zaladujTabeleKsiazki" prefHeight="400.0" prefWidth="151.0" styleClass="narzedzia-button" stylesheets="@../wyglad/glowne_ciemne.css" text="Lista Książek">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="imageview">
+               <image>
+                  <Image url="@../wyglad/books-stack-of-three.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#zaladujTabeleUzyt" prefHeight="400.0" prefWidth="151.0" styleClass="narzedzia-button" stylesheets="@../wyglad/glowne_ciemne.css" text="Lista Użyt.">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="imageview">
+               <image>
+                  <Image url="@../wyglad/team.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" prefHeight="400.0" prefWidth="150.0" styleClass="narzedzia-button" stylesheets="@../wyglad/glowne_ciemne.css" text="Ustawienia">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="imageview">
+               <image>
+                  <Image url="@../wyglad/settings.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</VBox>

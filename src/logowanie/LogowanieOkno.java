@@ -52,15 +52,21 @@ public class LogowanieOkno implements Initializable {
 
     @FXML
     void przyciskZaloguj(ActionEvent event) {
+        login.getStyleClass().remove("blad");
+        haslo.getStyleClass().remove("blad");
+        login.getStyleClass().remove("dobrze");
+        haslo.getStyleClass().remove("dobrze");
         String logowanieLogin = login.getText();
         String logowanieHaslo = haslo.getText();
         if (logowanieLogin.isEmpty() && logowanieHaslo.isEmpty()) {
-
+            login.getStyleClass().add("blad");
+            haslo.getStyleClass().add("blad");
         }
         else if(logowanieLogin.isEmpty()){
-
+            login.getStyleClass().add("blad");
         }
         else if(logowanieHaslo.isEmpty()){
+            haslo.getStyleClass().add("blad");
 
         }
         else{
@@ -71,11 +77,12 @@ public class LogowanieOkno implements Initializable {
                     String plogin = rs.getString("login");
                     String phaslo = rs.getString("haslo");
                     Integer prola = rs.getInt("rola");
-                    System.out.println(plogin);
 
 
                     if(plogin.equals(logowanieLogin)){
+                        login.getStyleClass().add("dobrze");
                         if(phaslo.equals(logowanieHaslo)){
+                            haslo.getStyleClass().add("dobrze");
                             if(prola == 2){
                                 Stage logowanie_zamknij = (Stage) logowanieOkno.getScene().getWindow();
                                 logowanie_zamknij.close();
@@ -88,11 +95,11 @@ public class LogowanieOkno implements Initializable {
                             }
                         }
                         else {
-
+                            haslo.getStyleClass().add("blad");
                         }
                     }
                     else{
-
+                        login.getStyleClass().add("blad");
                     }
 
                 }

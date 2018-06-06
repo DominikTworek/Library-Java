@@ -1,8 +1,9 @@
 
 * {
-    -fx-glowny: #212121;
+    -fx-glowny: #2c2c2c;
     -fx-drugi: #00B1C7;
     -fx-glownytekst: #BABABA;
+    -fx-tekstniebieski:#00E5FB;
     -fx-blad: #ba0e1b;
 
 }
@@ -11,9 +12,14 @@
     -fx-background-color: -fx-glowny;
 }
 
-.tekst{
+.text-field{
     -fx-text-fill: -fx-glownytekst;
     -jfx-focus-color: -fx-drugi;
+}
+
+.button{
+    -fx-text-fill: -fx-glownytekst;
+    -fx-background-color: -fx-glowny;
 }
 
 .login-przycisk{
@@ -28,3 +34,82 @@
     -fx-background-color: -fx-drugi;
     -fx-text-fill: -fx-glowny;
 }
+
+.dobrze{
+    -jfx-unfocus-color: -fx-drugi;
+    -jfx-focus-color: -fx-drugi;
+}
+
+.blad{
+    -jfx-unfocus-color: -fx-blad;
+    -jfx-focus-color: -fx-blad;
+}
+
+.tekst-wyglad{
+    -fx-text-fill: -fx-drugi;
+    color: -fx-drugi;
+}
+
+
+/* GLOWNE OKNO */
+
+.tab{
+    -fx-pref-width: 180;
+    -fx-pref-height: 30;
+    -fx-background-color: -fx-glowny;
+    -jfx-rippler-fill:RED;
+}
+
+.tab-header-background{
+    -fx-background-color: -fx-glowny;
+}
+
+/* glowne */
+
+.text-wypo{
+    -fx-fill: -fx-drugi;
+    -fx-font-size: 15px;
+}
+
+
+
+/* menu */
+
+
+.jfx-hambueger-icon{
+    -fx-spacing: 7;
+}
+
+.jfx-hambueger-icon StackPane
+{
+    -fx-background-color: -fx-drugi;
+    -fx-background-radius: 5px;
+}
+
+.narzedzia-button{
+    -fx-background-color: derive(-fx-glowny, 20%);
+}
+
+.narzedzia-button:hover{
+    -fx-background-color: -fx-drugi;
+    -fx-blend-mode: COLOR_DODGE;
+    -fx-text-fill: -fx-tekstniebieski;
+
+}
+
+.narzedzia-button:hover .imageview{
+    -fx-blend-mode: COLOR_DODGE;
+}
+
+
+/* Info o ksiazce */
+.styl-informacji{
+    -fx-background-color: derive(-fx-glowny, 8%);
+}
+
+
+
+
+
+
+

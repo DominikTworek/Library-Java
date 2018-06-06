@@ -2,34 +2,40 @@ package Glowne;
 
 
 import bazadanych.DatabaseControll;
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXHamburger;
+import com.jfoenix.controls.JFXTabPane;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.effects.JFXDepthManager;
+
+import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 import javafx.animation.FadeTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+
 import javafx.event.Event;
-import javafx.event.EventHandler;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.input.MouseEvent;
+
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+
 import javafx.util.Duration;
 
 
-import javax.xml.crypto.Data;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -43,6 +49,10 @@ import java.util.ResourceBundle;
 public class GlowneOkno implements Initializable {
 
 
+
+    @FXML
+    public static JFXTabPane glownyPanel;
+
     @FXML
     public TextField idKsiazki;
 
@@ -50,16 +60,7 @@ public class GlowneOkno implements Initializable {
     public TextField idUzytkownika;
 
     @FXML
-    private VBox oknoPowitalne;
-
-    @FXML
-    private AnchorPane oknoWyp;
-
-    @FXML
-    private AnchorPane zakladka;
-
-    @FXML
-    private AnchorPane zakladka_dwa;
+    public static VBox oknoPowitalne;
 
     @FXML
     private HBox tloKsiazka;
@@ -95,7 +96,50 @@ public class GlowneOkno implements Initializable {
     private Text emailU;
 
     @FXML
+    private JFXDrawer drawer;
+
+    @FXML
+    private JFXHamburger hamburger;
+
+    @FXML
     private JFXTextField idKsiazki2;
+
+
+    @FXML
+    private Text infoTytul;
+
+    @FXML
+    private Text infoAutor;
+
+    @FXML
+    private Text infoWydawca;
+
+    @FXML
+    private Text infoImie;
+
+    @FXML
+    private Text infoNazwisko;
+
+    @FXML
+    private Text infoEmail;
+
+    @FXML
+    private Text infoDataWyp;
+
+    @FXML
+    private Text infoDataOdd;
+
+    @FXML
+    private Text infoOdnowienia;
+
+    @FXML
+    private Text infoDodatkowaOplata;
+
+    @FXML
+    private Text infoIdKsiazki;
+
+    @FXML
+    private Text infoIdUzytkownika;
 
     @FXML
     private ListView<String> listaInformacji;
@@ -103,126 +147,48 @@ public class GlowneOkno implements Initializable {
     Boolean sprWczytaniaKsiazki = false;
 
 
-    @FXML
-    void zaladujDodajKsiazke(ActionEvent event) {
-        zaladujOkno("../dodawanieKsiazki/nowaksiazka.fxml", "Dodaj nowa ksiazke");
 
-    }
-
-    @FXML
-    void zaladujRejestracje(ActionEvent event) {
-        zaladujOkno("../rejestracja/rejestracja.fxml", "Dodaj nowego użytkownika");
-    }
-
-    @FXML
-    void zaladujTabeleKsiazki(ActionEvent event) {
-        zaladujOkno("../tabelaKsiazek/tabelaKsiazek.fxml", "Wyświetl książki");
-    }
-
-    @FXML
-    void zaladujTabeleUzyt(ActionEvent event) {
-        zaladujOkno("../tabelaUzytkownikow/tabelaUzytkownikow.fxml", "Wyświetl użytkowników");
-    }
-
+    DatabaseControll databaseControll;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        oknoWyp.setDisable(true);
-        oknoWyp.setOpacity(0);
-        zakladka_dwa.setOpacity(0);
         nazwaKsiazki.setOpacity(1);
         autorKsiazki.setOpacity(1);
         wydawcaKsiazki.setOpacity(1);
         dostepnoscKsiazka.setOpacity(1);
         JFXDepthManager.setDepth(tloKsiazka, 1);
         JFXDepthManager.setDepth(tloUzytkownik, 1);
+
+        databaseControll = DatabaseControll.getInstance();
+        initRamka();
     }
 
-    @FXML
-    void zmientab01(Event event) {
-        FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(501));
-        fadeTransition.setNode(zakladka_dwa);
-        fadeTransition.setByValue(1);
-        fadeTransition.setToValue(0);
-        fadeTransition.play();
-        zakladka_dwa.setDisable(true);
-        fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                zakladka.setDisable(false);
-                FadeTransition fadeTransition2 = new FadeTransition();
-                fadeTransition2.setDuration(Duration.millis(501));
-                fadeTransition2.setNode(zakladka);
-                fadeTransition2.setByValue(0);
-                fadeTransition2.setToValue(1);
-                fadeTransition2.play();
-
-            }
-        });
-    }
-
-    @FXML
-    void zmientab02(Event event) {
-        FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(500));
-        fadeTransition.setNode(zakladka);
-        fadeTransition.setByValue(1);
-        fadeTransition.setToValue(0);
-        fadeTransition.play();
-        zakladka.setDisable(true);
-        fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                zakladka_dwa.setDisable(false);
-                FadeTransition fadeTransition2 = new FadeTransition();
-                fadeTransition2.setDuration(Duration.millis(500));
-                fadeTransition2.setNode(zakladka_dwa);
-                fadeTransition2.setByValue(0);
-                fadeTransition2.setToValue(1);
-                fadeTransition2.play();
-            }
-        });
-    }
-
-
-    @FXML
-    void zmianaSceny(ActionEvent event) {
-
-        FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(1000));
-        fadeTransition.setNode(oknoPowitalne);
-        fadeTransition.setByValue(1);
-        fadeTransition.setToValue(0);
-        fadeTransition.play();
-        fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                oknoWyp.setDisable(false);
-                FadeTransition fadeTransition2 = new FadeTransition();
-                fadeTransition2.setDuration(Duration.millis(1200));
-                fadeTransition2.setNode(oknoWyp);
-                fadeTransition2.setByValue(0);
-                fadeTransition2.setToValue(1);
-                fadeTransition2.play();
-                zakladka_dwa.setDisable(true);
-                oknoPowitalne.setDisable(true);
-            }
-        });
-
-
-    }
-
-    void zaladujOkno(String lokacja, String nazwa) {
+    private void initRamka() {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource(lokacja));
-            Stage stage = new Stage(StageStyle.DECORATED);
-            stage.setTitle(nazwa);
-            stage.setScene(new Scene(parent));
-            stage.show();
+            VBox narzedzia = FXMLLoader.load(getClass().getResource("../narzedzia/narzedzia.fxml"));
+            drawer.setSidePane(narzedzia);
+            HamburgerSlideCloseTransition zadanie = new HamburgerSlideCloseTransition (hamburger);
+            zadanie.setRate(-1);
+            hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, (Event event) -> {
+                zadanie.setRate(zadanie.getRate() * -1);
+                zadanie.play();
+                if(drawer.isClosed()){
+                    drawer.open();
+                    drawer.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                } else {
+                    drawer.close();
+                    drawer.setPrefWidth(0);
+                }
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
+
+
+
+
+
 
     void animacje_tekstu_ksiazka() {
         nazwaKsiazki.setVisible(true);
@@ -340,7 +306,7 @@ public class GlowneOkno implements Initializable {
                 nazwaKsiazki.setText(ptytul);
                 autorKsiazki.setText(pautor);
                 wydawcaKsiazki.setText(pwydawca);
-                cenaKsiazki.setText(wyswietlanie_ceny);
+                cenaKsiazki.setText(wyswietlanie_ceny+" zł");
                 if (status_ksiazki == "true")
                     status_ksiazki = "Dostępna";
                 else
@@ -365,8 +331,6 @@ public class GlowneOkno implements Initializable {
     @FXML
     void idUzytkownika(KeyEvent event) {
         String id = idUzytkownika.getText();
-        //language=GenericSQL
-        //test
         String qu = "SELECT * FROM UZYTKOWNIK WHERE id = '" + id + "'";
         ResultSet rs = DatabaseControll.execQuery(qu);
         Boolean spr_uzyt = false;
@@ -480,7 +444,6 @@ public class GlowneOkno implements Initializable {
 
     @FXML
     void zaladujInformacje(KeyEvent event) {
-        ObservableList<String> wypozyczenieInformacje = FXCollections.observableArrayList();
         SimpleDateFormat dfDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         String data = "";
         String data2 = "";
@@ -488,11 +451,12 @@ public class GlowneOkno implements Initializable {
         sprWczytaniaKsiazki = false;
 
         String id_ksiazki = idKsiazki2.getText();
+
         String qu = "SELECT * FROM WYPOZYCZENIA WHERE ksiazka_id = '" + id_ksiazki + "'";
         ResultSet rs = DatabaseControll.execQuery(qu);
         try {
             while (rs.next()) {
-                String pid_ksiazki = id_ksiazki;
+                String pid_ksiazki = rs.getString("ksiazka_id");
                 String pid_uzytkownika = rs.getString("uzytkownik_id");
                 Timestamp pczas = rs.getTimestamp("czas");
                 Timestamp pczas_odd = rs.getTimestamp("czas_oddania");
@@ -502,39 +466,49 @@ public class GlowneOkno implements Initializable {
                 data = dfDate.format(pczas);
                 data2 = dfDate.format(pczas_odd);
 
-                wypozyczenieInformacje.add("Data wypożyczenia: " + data);
-                wypozyczenieInformacje.add("Data oddania: " + data2);
-                wypozyczenieInformacje.add("Ilość odnowień: " + podnowienia);
-                wypozyczenieInformacje.add("Dodatkowa zapłata: " + pid_cena + "zł");
+                infoDataWyp.setText(data);
+                infoDataOdd.setText(data2);
+                infoOdnowienia.setText(String.valueOf(podnowienia));
+                infoDodatkowaOplata.setText(String.valueOf(pid_cena)+ " zł");
 
-                wypozyczenieInformacje.add("");
-                wypozyczenieInformacje.add("");
-                wypozyczenieInformacje.add("Informacje o książce:");
+
                 qu = "SELECT * FROM KSIAZKA WHERE id = '" + pid_ksiazki + "'";
                 ResultSet rs2 = DatabaseControll.execQuery(qu);
                 while (rs2.next()) {
-                    wypozyczenieInformacje.add("Tytul książki: " + rs2.getString("tytul"));
-                    wypozyczenieInformacje.add("Autor książki: " + rs2.getString("autor"));
-                    wypozyczenieInformacje.add("Wydawca książki: " + rs2.getString("wydawca"));
+                    infoTytul.setText(rs2.getString("tytul"));
+                    infoAutor.setText(rs2.getString("autor"));
+                    infoWydawca.setText(rs2.getString("wydawca"));
+                    infoIdKsiazki.setText(rs2.getString("id"));
                 }
 
-                wypozyczenieInformacje.add("");
-                wypozyczenieInformacje.add("");
-                wypozyczenieInformacje.add("Informacje o użytkowniku:");
                 qu = "SELECT * FROM UZYTKOWNIK WHERE id = '" + pid_uzytkownika + "'";
                 ResultSet rs3 = DatabaseControll.execQuery(qu);
                 while (rs3.next()) {
-                    wypozyczenieInformacje.add("Imie: " + rs3.getString("imie"));
-                    wypozyczenieInformacje.add("Nazwisko: " + rs3.getString("nazwisko"));
-                    wypozyczenieInformacje.add("Login: " + rs3.getString("login"));
-                    wypozyczenieInformacje.add("Email: " + rs3.getString("email"));
+                    infoImie.setText(rs3.getString("imie"));
+                    infoNazwisko.setText(rs3.getString("nazwisko"));
+                    infoEmail.setText(rs3.getString("email"));
+                    infoIdUzytkownika.setText(rs3.getString("id"));
                 }
                 sprWczytaniaKsiazki = true;
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        listaInformacji.getItems().setAll(wypozyczenieInformacje);
+        if(id_ksiazki.isEmpty()){
+            sprWczytaniaKsiazki = false;
+            infoImie.setText("Imie");
+            infoNazwisko.setText("Nazwisko");
+            infoEmail.setText("Email");
+            infoDataOdd.setText("Data Oddania");
+            infoDataWyp.setText("Data Wypożyczenia");
+            infoOdnowienia.setText("Ilość Odnowień");
+            infoTytul.setText("Tytuł");
+            infoAutor.setText("Autor");
+            infoWydawca.setText("Wydawca");
+            infoIdUzytkownika.setText("Id Uzytkownika");
+            infoIdKsiazki.setText("Id Książki");
+        }
     }
 
     @FXML

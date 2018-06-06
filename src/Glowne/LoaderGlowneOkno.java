@@ -13,7 +13,7 @@ public class LoaderGlowneOkno extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("GlowneOkno.fxml"));
         primaryStage.setTitle("Projekt Java");
-        primaryStage.setScene(new Scene(root, 666, 467));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
         DatabaseControll.getInstance();
     }

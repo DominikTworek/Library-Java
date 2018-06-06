@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tab?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,261 +17,359 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Glowne.GlowneOkno">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" stylesheets="@../wyglad/glowne_ciemne.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Glowne.GlowneOkno">
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
-         <top>
-            <MenuBar BorderPane.alignment="CENTER">
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-         </top>
-         <left>
-            <VBox prefHeight="375.0" prefWidth="150.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#zmianaSceny" prefHeight="80.0" prefWidth="150.0" text="Wypożycz Książkę">
-                     <graphic>
-                        <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/wyp.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#zaladujDodajKsiazke" prefHeight="80.0" prefWidth="151.0" text="Dodaj Książkę">
-                     <graphic>
-                        <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/book.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="57.0" mnemonicParsing="false" onAction="#zaladujRejestracje" prefHeight="80.0" prefWidth="151.0" text="Dodaj Użytkownika">
-                     <graphic>
-                        <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/study.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#zaladujTabeleKsiazki" prefHeight="80.0" prefWidth="151.0" text="Wyświetl Książki">
-                     <graphic>
-                        <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/books.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#zaladujTabeleUzyt" prefHeight="80.0" prefWidth="151.0" text="Wyświetl Użytkowników">
-                     <graphic>
-                        <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/team.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="151.0" text="Ustawienia">
-                     <graphic>
-                        <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/tools.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </VBox>
-         </left>
          <center>
-            <AnchorPane prefHeight="442.0" prefWidth="283.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="452.0" prefWidth="666.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox fx:id="oknoPowitalne" alignment="CENTER" prefHeight="442.0" prefWidth="516.0">
-                     <children>
-                        <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="System zarządzania biblioteką" underline="true" wrappingWidth="319.13671875">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Karolina Gałka | Dominik Tworek | Mateusz Sałata" />
-                     </children>
-                  </VBox>
-                  <AnchorPane fx:id="oknoWyp" prefHeight="442.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <children>
-                        <HBox prefHeight="32.0" prefWidth="516.0" style="-fx-background-color: #6F6F6F;">
-                           <children>
-                              <Button mnemonicParsing="false" onAction="#zmientab01" prefHeight="29.0" prefWidth="112.0" text="Wypożycz książkę" textAlignment="CENTER">
-                                 <HBox.margin>
-                                    <Insets left="110.0" top="1.0" />
-                                 </HBox.margin>
-                              </Button>
-                              <Button mnemonicParsing="false" onAction="#zmientab02" prefHeight="29.0" prefWidth="112.0" text="Przedłuż/Oddaj" textAlignment="CENTER">
-                                 <HBox.margin>
-                                    <Insets left="50.0" top="1.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                        </HBox>
-                    <AnchorPane fx:id="zakladka_dwa" minHeight="0.0" minWidth="0.0" prefHeight="413.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
-                           <children>
-                              <BorderPane layoutX="98.0" layoutY="58.0" prefHeight="346.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <top>
-                                    <JFXTextField fx:id="idKsiazki2" alignment="CENTER" blendMode="HARD_LIGHT" labelFloat="true" onKeyTyped="#zaladujInformacje" prefHeight="25.0" promptText="Wpisz id książki" BorderPane.alignment="CENTER">
-                                       <BorderPane.margin>
-                                          <Insets left="50.0" right="50.0" top="15.0" />
-                                       </BorderPane.margin>
-                                    </JFXTextField>
-                                 </top>
-                                 <center>
-                                    <ListView fx:id="listaInformacji" prefHeight="244.0" prefWidth="430.0" BorderPane.alignment="CENTER">
-                                       <BorderPane.margin>
-                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-                                       </BorderPane.margin>
-                                    </ListView>
-                                 </center>
-                                 <bottom>
-                                    <HBox alignment="CENTER" prefHeight="73.0" prefWidth="450.0" BorderPane.alignment="CENTER">
-                                       <children>
-                                          <JFXButton onAction="#przyciskOdnow" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Przedłuż">
-                                             <HBox.margin>
-                                                <Insets right="10.0" />
-                                             </HBox.margin>
-                                             <graphic>
-                                                <ImageView fitHeight="32.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@icons/recycle-sign.png" />
-                                                   </image>
-                                                </ImageView>
-                                             </graphic>
-                                          </JFXButton>
-                                          <JFXButton onAction="#przycyskOddaj" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Oddaj">
-                                             <HBox.margin>
-                                                <Insets right="10.0" />
-                                             </HBox.margin>
-                                             <graphic>
-                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@icons/confirmsd.png" />
-                                                   </image>
-                                                </ImageView>
-                                             </graphic>
-                                          </JFXButton>
-                                       </children>
-                                    </HBox>
-                                 </bottom>
-                              </BorderPane>
-                           </children>
-                        </AnchorPane>
-                    <AnchorPane fx:id="zakladka" minHeight="0.0" minWidth="0.0" prefHeight="414.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
-                           <children>
-                              <VBox prefHeight="413.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <JFXTabPane fx:id="glownyPanel" prefHeight="467.0" prefWidth="1000.0" rotateGraphic="true" stylesheets="@../wyglad/glowne_ciemne.css" tabMaxHeight="3.0" tabMaxWidth="3.0" tabMinHeight="2.0" tabMinWidth="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab text="Wypożycz">
+                           <content>
+                              <AnchorPane fx:id="oknoWyp" prefHeight="442.0" prefWidth="516.0">
                                  <children>
-                                    <HBox fx:id="tloKsiazka" alignment="CENTER" prefHeight="125.0" prefWidth="486.0" style="-fx-background-color: #B0B0B0;">
+                                    <AnchorPane fx:id="zakladka" minHeight="0.0" minWidth="0.0" prefHeight="414.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
                                        <children>
-                                          <TextField fx:id="idKsiazki" alignment="CENTER" onKeyTyped="#idKsiazki" promptText="Wpisz id książki">
-                                             <HBox.margin>
-                                                <Insets left="10.0" />
-                                             </HBox.margin>
-                                          </TextField>
-                                          <VBox alignment="CENTER" prefHeight="100.0" prefWidth="312.0">
+                                          <VBox prefHeight="413.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text fx:id="nazwaKsiazki" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa Książki">
+                                                <HBox fx:id="tloKsiazka" alignment="CENTER" prefHeight="125.0" prefWidth="486.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                         <children>
+                                                            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../wyglad/open-book-top-view.png" />
+                                                               </image>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="15.0" />
+                                                               </VBox.margin>
+                                                            </ImageView>
+                                                            <JFXTextField fx:id="idKsiazki" alignment="TOP_LEFT" blendMode="ADD" labelFloat="true" onKeyTyped="#idKsiazki" prefWidth="200.0" promptText="Wpisz id książki">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="100.0" prefWidth="312.0">
+                                                         <children>
+                                                            <Text fx:id="nazwaKsiazki" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Nazwa Książki" textAlignment="CENTER" wrappingWidth="350.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="2.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="autorKsiazki" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Autor" textAlignment="CENTER" wrappingWidth="350.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="2.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="wydawcaKsiazki" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Wydawca" textAlignment="CENTER" wrappingWidth="350.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="2.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="dostepnoscKsiazka" layoutX="141.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Dostępność" textAlignment="CENTER" wrappingWidth="350.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="2.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="cenaKsiazki" layoutX="135.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Cena" textAlignment="CENTER" wrappingWidth="350.0" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
                                                    <VBox.margin>
-                                                      <Insets top="2.0" />
-                                                   </VBox.margin></Text>
-                                                <Text fx:id="autorKsiazki" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor">
-                                                   <VBox.margin>
-                                                      <Insets top="2.0" />
-                                                   </VBox.margin></Text>
-                                                <Text fx:id="wydawcaKsiazki" strokeType="OUTSIDE" strokeWidth="0.0" text="Wydawca">
-                                                   <VBox.margin>
-                                                      <Insets top="2.0" />
-                                                   </VBox.margin></Text>
-                                                <Text fx:id="dostepnoscKsiazka" layoutX="141.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dostępność">
-                                                   <VBox.margin>
-                                                      <Insets top="2.0" />
+                                                      <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
                                                    </VBox.margin>
-                                                </Text>
-                                                <Text fx:id="cenaKsiazki" layoutX="135.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cena" />
+                                                </HBox>
+                                                <HBox fx:id="tloUzytkownik" alignment="CENTER" prefHeight="125.0" prefWidth="486.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                         <children>
+                                                            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="15.0" />
+                                                               </VBox.margin>
+                                                               <image>
+                                                                  <Image url="@../wyglad/man-user.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <JFXTextField fx:id="idUzytkownika" alignment="TOP_LEFT" blendMode="ADD" labelFloat="true" onKeyTyped="#idUzytkownika" prefWidth="200.0" promptText="Wpisz id użytkownika">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="100.0" prefWidth="312.0">
+                                                         <children>
+                                                            <Text fx:id="imieU" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Imie" textAlignment="CENTER" wrappingWidth="350.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="2.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="nazwiskoU" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Nazwisko" textAlignment="CENTER" wrappingWidth="350.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="2.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="loginU" layoutX="141.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Login" textAlignment="CENTER" wrappingWidth="350.0" />
+                                                            <Text fx:id="emailU" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Email" textAlignment="CENTER" wrappingWidth="350.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="2.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="107.0" prefWidth="516.0">
+                                                   <children>
+                                                      <JFXButton onAction="#przyciskWypozycz" prefHeight="40.0" prefWidth="114.0" ripplerFill="TRANSPARENT" styleClass="login-przycisk" stylesheets="@../wyglad/glowne_ciemne.css" text="Wypożycz" textAlignment="CENTER">
+                                                         <font>
+                                                            <Font name="Arial" size="14.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
                                              </children>
                                           </VBox>
                                        </children>
-                                       <VBox.margin>
-                                          <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
-                                       </VBox.margin>
-                                    </HBox>
-                                    <HBox fx:id="tloUzytkownik" alignment="CENTER" prefHeight="125.0" prefWidth="486.0" style="-fx-background-color: #B0B0B0;">
-                                       <children>
-                                          <TextField fx:id="idUzytkownika" alignment="CENTER" onKeyTyped="#idUzytkownika" promptText="Wpisz id użytkownika">
-                                             <HBox.margin>
-                                                <Insets left="10.0" />
-                                             </HBox.margin>
-                                          </TextField>
-                                          <VBox alignment="CENTER" prefHeight="100.0" prefWidth="312.0">
-                                             <children>
-                                                <Text fx:id="imieU" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie">
-                                                   <VBox.margin>
-                                                      <Insets top="2.0" />
-                                                   </VBox.margin></Text>
-                                                <Text fx:id="nazwiskoU" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko">
-                                                   <VBox.margin>
-                                                      <Insets top="2.0" />
-                                                   </VBox.margin></Text>
-                                                <Text fx:id="loginU" layoutX="141.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" />
-                                                <Text fx:id="emailU" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
-                                                   <VBox.margin>
-                                                      <Insets top="2.0" />
-                                                   </VBox.margin></Text>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                       <VBox.margin>
-                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                       </VBox.margin>
-                                    </HBox>
-                                    <HBox alignment="CENTER" prefHeight="107.0" prefWidth="516.0">
-                                       <children>
-                                          <JFXButton onAction="#przyciskWypozycz" prefHeight="41.0" prefWidth="109.0" ripplerFill="TRANSPARENT" styleClass="jfx-button" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Wypożycz" textAlignment="CENTER">
-                                             <graphic>
-                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@icons/confirm.png" />
-                                                   </image>
-                                                </ImageView>
-                                             </graphic>
-                                             <font>
-                                                <Font name="Arial" size="12.0" />
-                                             </font>
-                                          </JFXButton>
-                                       </children>
-                                    </HBox>
+                                    </AnchorPane>
                                  </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Oddaj/Przedłuż">
+                           <content>
+                              <AnchorPane fx:id="zakladka_dwa" minHeight="0.0" minWidth="0.0" prefHeight="413.0" prefWidth="516.0">
+                                 <children>
+                                    <BorderPane layoutX="-1.0" layoutY="58.0" prefHeight="429.0" prefWidth="517.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <top>
+                                          <JFXTextField fx:id="idKsiazki2" alignment="CENTER" blendMode="ADD" labelFloat="true" onKeyTyped="#zaladujInformacje" prefHeight="25.0" promptText="Wpisz id książki" styleClass="tekst" stylesheets="@../wyglad/glowne_ciemne.css" BorderPane.alignment="CENTER">
+                                             <BorderPane.margin>
+                                                <Insets left="50.0" right="50.0" top="15.0" />
+                                             </BorderPane.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </top>
+                                       <bottom>
+                                          <HBox alignment="CENTER" prefHeight="73.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <JFXButton onAction="#przyciskOdnow" prefWidth="100.0" styleClass="login-przycisk" stylesheets="@../wyglad/glowne_ciemne.css" text="Przedłuż">
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                   <graphic>
+                                                      <ImageView fitHeight="32.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/recycle-sign.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXButton onAction="#przycyskOddaj" prefWidth="100.0" styleClass="login-przycisk" stylesheets="@../wyglad/glowne_ciemne.css" text="Oddaj">
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                   <graphic>
+                                                      <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@icons/confirmsd.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </bottom>
+                                       <center>
+                                          <HBox alignment="CENTER" prefHeight="318.0" prefWidth="1001.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="210.0" styleClass="styl-informacji" stylesheets="@../wyglad/glowne_ciemne.css">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <children>
+                                                      <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                                                         <image>
+                                                            <Image url="@../wyglad/128x128.png" />
+                                                         </image>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </ImageView>
+                                                      <Text fx:id="infoTytul" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Tytuł Książki">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text fx:id="infoAutor" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Autor Książki">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text fx:id="infoWydawca" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Wydawca Książki">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="210.0" styleClass="styl-informacji" stylesheets="@../wyglad/glowne_ciemne.css">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <children>
+                                                      <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../wyglad/128x128x2.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text fx:id="infoImie" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Imie">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text fx:id="infoNazwisko" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Nazwisko">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text fx:id="infoEmail" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Email">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="210.0" styleClass="styl-informacji" stylesheets="@../wyglad/glowne_ciemne.css">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <children>
+                                                      <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../wyglad/128x128x3.png" />
+                                                         </image>
+                                                         <VBox.margin>
+                                                            <Insets top="15.0" />
+                                                         </VBox.margin>
+                                                      </ImageView>
+                                                      <Text fx:id="infoDataWyp" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Data Wypożyczenia">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text fx:id="infoDataOdd" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Data Oddania">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text fx:id="infoOdnowienia" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Ilość odnowień">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="210.0" styleClass="styl-informacji" stylesheets="@../wyglad/glowne_ciemne.css">
+                                                   <children>
+                                                      <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../wyglad/128x128x4.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text fx:id="infoDodatkowaOplata" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Dodatkowa Oplata">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text fx:id="infoIdKsiazki" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Id Książki">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text fx:id="infoIdUzytkownika" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-wypo" text="Id Użytkownika">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets top="20.0" />
+                                             </BorderPane.margin>
+                                          </HBox>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </JFXTabPane>
+                  <JFXHamburger fx:id="hamburger" layoutY="14.0" prefHeight="22.0" prefWidth="27.0" styleClass="jfx-hambueger-icon" stylesheets="@../wyglad/glowne_ciemne.css" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0" />
                </children>
             </AnchorPane>
          </center>
+         <right>
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="150.0" direction="RIGHT" prefWidth="0.0" resizableOnDrag="true" BorderPane.alignment="CENTER" />
+         </right>
       </BorderPane>
    </children>
 </StackPane>
