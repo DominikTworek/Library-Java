@@ -40,6 +40,16 @@ public class Nowaksiazka implements Initializable {
     }
 
 
+    /**
+     * Metoda przypisana do przycisku Zapisz
+     * Po naciśnięciu przycisku zapisz, zostają pobrane wszystkie dane z pół tekstowych
+     * Następnie zostaje uruchomiona walidacja czy pola nie są puste.
+     * Jeśli cała walidacja zostaje spełniona książka zostanie dodany do bazy danych.
+     * Zostaje wyświetlony stosowny komunikat, z potwierdzeniem operacji.
+     * W przeciwnym przypadku zostaje wyświetlony Error.
+     *
+     * @param actionEvent Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     public void dodajksiazke(javafx.event.ActionEvent actionEvent) {
         String ksiazkaID = id.getText();
@@ -81,7 +91,12 @@ public class Nowaksiazka implements Initializable {
         }
     }
 
-
+    /**
+     * Metoda przypisana do przycisku Anuluj
+     * Po naciśnięciu przycisku anuluj, zostaje pobrane aktualnie otwarte okno i zamknięte
+     *
+     * @param actionEvent Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     public void anuluj(javafx.event.ActionEvent actionEvent) {
         Stage ksiazka_zamknij = (Stage) ksiazka_main.getScene().getWindow();
         ksiazka_zamknij.close();

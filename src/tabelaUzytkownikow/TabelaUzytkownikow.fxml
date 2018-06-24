@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tabelaUzytkownikow.TabelaUzytkownikow">
+<AnchorPane prefHeight="400.0" prefWidth="800.0" stylesheets="@../wyglad/glowne_ciemne.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tabelaUzytkownikow.TabelaUzytkownikow">
     <children>
         <TableView fx:id="tabelaUzytkownikow" layoutX="52.0" layoutY="38.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <columns>
@@ -36,43 +36,43 @@
             </ContextMenu>
          </contextMenu>
         </TableView>
-      <AnchorPane fx:id="edytowanie" disable="true" prefHeight="200.0" prefWidth="800.0">
+      <AnchorPane fx:id="edytowanie" disable="true" prefHeight="200.0" prefWidth="800.0" styleClass="root" stylesheets="@../wyglad/glowne_ciemne.css">
          <children>
-            <VBox prefHeight="309.0" prefWidth="833.0">
+            <VBox prefHeight="309.0" prefWidth="833.0" stylesheets="@../wyglad/glowne_ciemne.css">
                <children>
-                  <JFXTextField fx:id="imie" promptText="Imie">
+                  <JFXTextField fx:id="imie" promptText="Imie" styleClass="tekst-wyglad" stylesheets="@../wyglad/glowne_ciemne.css">
                      <VBox.margin>
                         <Insets left="15.0" right="15.0" top="15.0" />
                      </VBox.margin>
                   </JFXTextField>
-                  <JFXTextField fx:id="nazwisko" promptText="Nazwisko">
+                  <JFXTextField fx:id="nazwisko" promptText="Nazwisko" styleClass="tekst-wyglad" stylesheets="@../wyglad/glowne_ciemne.css">
                      <VBox.margin>
                         <Insets left="15.0" right="15.0" top="15.0" />
                      </VBox.margin>
                   </JFXTextField>
-                  <JFXTextField fx:id="email" promptText="Email">
+                  <JFXTextField fx:id="email" promptText="Email" styleClass="tekst-wyglad" stylesheets="@../wyglad/glowne_ciemne.css">
                      <VBox.margin>
                         <Insets left="15.0" right="15.0" top="15.0" />
                      </VBox.margin>
                   </JFXTextField>
-                  <JFXTextField fx:id="rola" promptText="Rola">
+                  <JFXTextField fx:id="rola" promptText="Rola" styleClass="tekst-wyglad" stylesheets="@../wyglad/glowne_ciemne.css">
                      <VBox.margin>
                         <Insets left="15.0" right="15.0" top="15.0" />
                      </VBox.margin>
                   </JFXTextField>
-                  <JFXTextField fx:id="kara" promptText="Kara">
+                  <JFXTextField fx:id="kara" promptText="Kara" styleClass="tekst-wyglad" stylesheets="@../wyglad/glowne_ciemne.css">
                      <VBox.margin>
                         <Insets left="15.0" right="15.0" top="15.0" />
                      </VBox.margin>
                   </JFXTextField>
                    <HBox prefHeight="100.0" prefWidth="200.0">
                        <children>
-                           <JFXButton onAction="#aktualizuj" prefHeight="59.0" prefWidth="274.0" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Edytuj">
+                           <JFXButton onAction="#aktualizuj" prefHeight="59.0" prefWidth="274.0" styleClass="login-przycisk" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Edytuj">
                                <HBox.margin>
                                    <Insets left="130.0" top="15.0" />
                                </HBox.margin>
                            </JFXButton>
-                           <JFXButton layoutX="25.0" layoutY="25.0" onAction="#anuluj" prefHeight="59.0" prefWidth="274.0" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Wróć">
+                           <JFXButton layoutX="25.0" layoutY="25.0" onAction="#anuluj" prefHeight="59.0" prefWidth="274.0" styleClass="login-przycisk" stylesheets="@../dodawanieKsiazki/dodajksiazke.css" text="Wróć">
                                <HBox.margin>
                                    <Insets left="15.0" top="15.0" />
                                </HBox.margin>

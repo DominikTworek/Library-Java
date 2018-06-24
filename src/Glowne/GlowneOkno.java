@@ -166,6 +166,10 @@ public class GlowneOkno implements Initializable {
         initRamka();
     }
 
+    /**
+     * Znajduje się tutaj cały pasek narzędzi. Sceny są wczytywane w klasie Narzedzia.
+     * Został tutaj zastosowany Hamburger z SceneBuilder. Dzięki czemu mamy ładnie animowane rozwijanie menu.
+     */
     private void initRamka() {
         try {
             VBox narzedzia = FXMLLoader.load(getClass().getResource("../narzedzia/narzedzia.fxml"));
@@ -189,7 +193,9 @@ public class GlowneOkno implements Initializable {
 
     }
 
-
+    /**
+     * Dzięki ten metodzie możemy w dowolnym miejscu dodać animacje wczytywania informacji.
+     */
     void animacje_informacji(){
         ScaleTransition fadeTransition = new ScaleTransition();
         fadeTransition.setDuration(Duration.millis(300));
@@ -312,7 +318,13 @@ public class GlowneOkno implements Initializable {
         fadeTransition2.play();
     }
 
-
+    /**
+     * Metoda przypisana do pola tekstowego
+     * Po wpisaniu dowolnego znaku z klawiatury zostają pobrane dane dotyczące książki
+     * Jeśli dana książka istnieje zostają wczytane dane oraz wyświetlone.
+     *
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     void idKsiazki(KeyEvent event) {
         String id = idKsiazki.getText();
@@ -354,6 +366,13 @@ public class GlowneOkno implements Initializable {
             animacje_tekstu_ksiazka();
     }
 
+    /**
+     * Metoda przypisana do pola tekstowego
+     * Po wpisaniu dowolnego znaku z klawiatury zostają pobrane dane dotyczące użytkownika
+     * Jeśli dany użytkownik istnieje zostają wczytane dane oraz wyświetlone.
+     *
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     void idUzytkownika(KeyEvent event) {
         String id = idUzytkownika.getText();
@@ -386,6 +405,14 @@ public class GlowneOkno implements Initializable {
             animacje_tekstu_uzyt();
     }
 
+    /**
+     * Metoda przypisana do przycisku Wypożycz
+     * Najpierw zostaje uruchomiona walidacja czy istnieje określony użytkownik oraz książka.
+     * Następnie następuje sprawdzenie, czy ta książka jest obecnie wypożyczona.
+     * Jeśli wszystko się zgadza wyskoczy stosowne okno, z potwierdzeniem wypożyczenia.
+     *
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     void przyciskWypozycz(ActionEvent event) {
         String id_ksiazki = idKsiazki.getText();
@@ -468,6 +495,13 @@ public class GlowneOkno implements Initializable {
         }
     }
 
+    /**
+     * Metoda przypisana do pola tekstowego
+     * Po wpisaniu ID książki w odpowiednim polu zostają wczytane dane z bazy danych.
+     * Następnie wszystkie dane zostają przypisane do odpowiednich pól tekstowych.
+     *
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     void zaladujInformacje(KeyEvent event) {
         SimpleDateFormat dfDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -553,6 +587,13 @@ public class GlowneOkno implements Initializable {
         }
     }
 
+    /**
+     * Metoda przypisana do przycisku Oddaj
+     * Po naciśnięciu przycisku oddaj, zostaje sprawdzony warunek, czy dana książka została zeskanowana.
+     * Jeśli tak wyskakuje okno pomocnicze, czy na pewno przyjąć zwrócenie książki.
+     *
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     void przycyskOddaj(ActionEvent event) {
         String id_ksiazki = idKsiazki2.getText();
@@ -589,6 +630,14 @@ public class GlowneOkno implements Initializable {
         }
     }
 
+    /**
+     * Metoda przypisana do przycisku Odnów
+     * Po naciśnięciu przycisku Odnów, zostaje sprawdzony warunek, czy dana książka została zeskanowana.
+     * Jeśli tak wyskakuje okno pomocnicze, czy na pewno odnowić książkę.
+     * Książka się odnawia na okres 7 dni za cenę 10zł.
+     *
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     void przyciskOdnow(ActionEvent event) {
 

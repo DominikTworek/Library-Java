@@ -43,14 +43,6 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" prefHeight="400.0" prefWidth="150.0" styleClass="narzedzia-button" stylesheets="@../wyglad/glowne_ciemne.css" text="Ustawienia">
-         <graphic>
-            <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="imageview">
-               <image>
-                  <Image url="@../wyglad/settings.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#Zamknij" prefHeight="400.0" prefWidth="150.0" styleClass="narzedzia-button" stylesheets="@../wyglad/glowne_ciemne.css" text="Zamknij" />
    </children>
 </VBox>

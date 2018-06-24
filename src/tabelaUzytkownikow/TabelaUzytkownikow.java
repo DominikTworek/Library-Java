@@ -15,7 +15,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import tabelaKsiazek.TabelaKsiazek;
 
 
 import java.net.URL;
@@ -73,6 +72,9 @@ public class TabelaUzytkownikow implements Initializable {
     @FXML
     private JFXTextField kara;
 
+    /**
+     * Inicjalizacja metod wraz z uruchomieniem okna listy użytkowników
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         czytanieUzytkownikow();
@@ -81,6 +83,10 @@ public class TabelaUzytkownikow implements Initializable {
 
     }
 
+    /**
+     * Metoda ta pobiera wszystkie dane dotyczące użytkownika z bazy danych po przez polecenie zapisane jako String 'qu'
+     * Następnie przypisuje dane do odpowiednich pól w tabeli.
+     */
     private void czytanieUzytkownikow() {
         list.clear();
         DatabaseControll odczyt = DatabaseControll.getInstance();
@@ -105,7 +111,9 @@ public class TabelaUzytkownikow implements Initializable {
         tabelaUzytkownikow.setItems(list);
     }
 
-
+    /**
+     * Inicjalizacja wszystkich kolumn odpowiednimi wartościami z bazy.
+     */
     private void initUzyt() {
         idTab.setCellValueFactory(new PropertyValueFactory<>("id"));
         imieTab.setCellValueFactory(new PropertyValueFactory<>("imie"));
@@ -167,6 +175,14 @@ public class TabelaUzytkownikow implements Initializable {
             return kara.get();
         }
     }
+
+    /**
+     * Metoda przypisana do przycisku Aktualizuj
+     * Metoda ta pobiera wszystkie dane z pól TextField, następnie pobrane dane są ładowane do zapytania SQL
+     * I wykonywane. Jeśli akcja aktualizacji się powiedzie zostanie wyświetlony odpowiedni komunikat.
+     * Sytuacja będzie podobna podczas niepowodzenia operacji. Wyskoczy użytkownikowi Error.
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     public void aktualizuj(ActionEvent event) {
         String imiep = imie.getText();
@@ -175,6 +191,16 @@ public class TabelaUzytkownikow implements Initializable {
         String rolap = rola.getText();
         String karap = kara.getText();
         uzytkownicy pobieranieDanych = tabelaUzytkownikow.getSelectionModel().getSelectedItem();
+
+
+        if (imiep.isEmpty() || nazwiskop.isEmpty() || emailp.isEmpty() || rolap.isEmpty() ||karap.isEmpty() ) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Błąd Wprowadzania");
+            alert.setHeaderText("Edycja Użytkownika");
+            alert.setContentText("Proszę wypełnić wszystkie pola");
+            alert.showAndWait();
+            return;
+        }
 
         String qu = "UPDATE UZYTKOWNIK SET " +
                 "imie = '" + imiep + "', " +
@@ -202,6 +228,11 @@ public class TabelaUzytkownikow implements Initializable {
 
     }
 
+    /**
+     * Metoda przypisana do przycisku Anuluj.
+     * Po naciśnięciu przycisku okno z edycją jest ukrywane i zostaje wyświetlona tabela użytkowników.
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     public void anuluj(ActionEvent event) {
         edytowanie.setVisible(false);
@@ -210,6 +241,14 @@ public class TabelaUzytkownikow implements Initializable {
         tabelaUzytkownikow.setDisable(false);
     }
 
+    /**
+     * Metoda przypisana do przycisku Edytuj.
+     * Po naciśnięciu przycisku okno z tabelą użytkowników zostaje ukryte i pokazuje się okno edycji.
+     * Zostają pobierane informacje o zaznaczonym użytkowniku do edycji.
+     * Po wprowadzeniu zmian wyskoczy komunikat z potwierdzeniem wprowawdzenia zmian.
+     * W innym przypadku wyskoczy Error.
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     void edytowanie(ActionEvent event) {
         uzytkownicy wybieranieDoUsuwania = tabelaUzytkownikow.getSelectionModel().getSelectedItem();
@@ -230,7 +269,12 @@ public class TabelaUzytkownikow implements Initializable {
 
     }
 
-
+    /**
+     * Metoda przypisana do przycisku Usuń.
+     * Po naciśnięciu w ten przycisk wyskakuje komunikat, czy na pewno chcesz usunąć użytkownika.
+     * Jeśli naciśniemy 'tak' wszystkie dane o zaznaczonym użytkowniku zostaną usunięte.
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     void usuwanie(ActionEvent event) {
         uzytkownicy wybieranieDoUsuwania = tabelaUzytkownikow.getSelectionModel().getSelectedItem();

@@ -1,7 +1,6 @@
 package logowanie;
 
 
-import Glowne.GlowneOkno;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -10,7 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -21,7 +19,6 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.prefs.Preferences;
 
 public class LogowanieOkno implements Initializable {
 
@@ -44,12 +41,22 @@ public class LogowanieOkno implements Initializable {
         DatabaseControll = DatabaseControll.getInstance();
     }
 
+    /**
+     * Metoda przypisana do przycisku Wyjdź
+     * Po naciśnięciu przycisku Wyjdź cały program się zamyka.
+     */
     @FXML
     void przyciskWyjdz(ActionEvent event) {
         System.exit(0);
 
     }
 
+    /**
+     * Metoda przypisana do przycisku Zaloguj
+     * Po naciśnięciu przycisku Zaloguj następuje walidacja danych logowania
+     * Jeśli dane są niepoprawne kolor danego pola tekstowego zmieni swój kolor na czerwono.
+     * Po przejściu walidacji zostaje zamknięte okno logowania i załadowane okno zarządzania biblioteką
+     */
     @FXML
     void przyciskZaloguj(ActionEvent event) {
         login.getStyleClass().remove("blad");
@@ -109,6 +116,11 @@ public class LogowanieOkno implements Initializable {
         }
     }
 
+    /**
+    * Dzięki zaladujOkno możemu w prosty sposób pobierać sceny do programu.
+     * @param  lokacja Lokalizacja danej sceny
+     * @param nazwa Nazwa sceny, która będzie się pokazywać jako tytuł.
+     */
      void zaladujOkno(String lokacja, String nazwa) {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource(lokacja));

@@ -24,6 +24,9 @@ public class DatabaseControll {
         return handler;
     }
 
+    /**
+     * Tutaj następuję połączenie się z bazą i jest wywyływane zawsze z uruchomieniem programu
+     */
     void polaczenie() {
         try {
             Class.forName("org.apache.derby.jdbc.EmbeddedDriver").getConstructor().newInstance();
@@ -33,6 +36,9 @@ public class DatabaseControll {
         }
     }
 
+    /**
+     * Jeśli tabela KSIAZKA nie istnieje zostaje stworzona tabela KSIAZKA w bazie danych
+     */
     void tworzenieTabeliKsiazka() {
         try {
             stmt = conn.createStatement();
@@ -53,6 +59,10 @@ public class DatabaseControll {
         }
     }
 
+
+    /**
+     * Jeśli tabela UZYTKOWNIK nie istnieje zostaje stworzona tabela UZYTKOWNIK w bazie danych
+     */
     void tworzenieTabeliUzytkownik() {
         try {
             stmt = conn.createStatement();
@@ -74,6 +84,9 @@ public class DatabaseControll {
         }
     }
 
+    /**
+     * Jeśli tabela WYPOZYCZENIA nie istnieje zostaje stworzona tabela WYPOZYCZENIA w bazie danych
+     */
     void tworzenieTabeliWyporzyczenia() {
         try {
             stmt = conn.createStatement();
@@ -94,6 +107,13 @@ public class DatabaseControll {
         }
     }
 
+    /**
+     * Metoda ta służy do uruchamiania wszystkich poleceń
+     *
+     * @param query Polecenie, które ma zostać wykonane
+     *
+     * @return Zwraca wynik zapytania i je wykonuje.
+     */
     public static ResultSet execQuery(String query) {
         ResultSet result;
         try {
@@ -107,6 +127,13 @@ public class DatabaseControll {
         return result;
     }
 
+    /**
+     * Metoda ta służy do uruchamiania wszystkich poleceń
+     *
+     * @param qu Polecenie, które ma zostać wykonane
+     *
+     * @return prawdę jeśli wykona się zapytanie bądź fałsz jeśli się ono nie wykona
+     */
     public static boolean execAction(String qu) {
         try {
             stmt = conn.createStatement();

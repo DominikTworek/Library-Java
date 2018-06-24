@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"bazadanych"},{"l":"dodawanieKsiazki"},{"l":"Glowne"},{"l":"logowanie"},{"l":"narzedzia"},{"l":"rejestracja"},{"l":"tabelaKsiazek"},{"l":"tabelaUzytkownikow"}]

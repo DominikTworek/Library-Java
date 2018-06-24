@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="derbyrun">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libraries/derbyrun.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

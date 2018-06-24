@@ -57,6 +57,9 @@ public class TabelaKsiazek implements Initializable {
     @FXML
     private JFXTextField cena;
 
+    /**
+     * Inicjalizacja metod wraz z uruchomieniem okna listy użytkowników
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initKsiaz();
@@ -64,6 +67,10 @@ public class TabelaKsiazek implements Initializable {
         edytowanie.setVisible(false);
     }
 
+    /**
+     * Metoda ta pobiera wszystkie dane dotyczące książki z bazy danych po przez polecenie zapisane jako String 'qu'
+     * Następnie przypisuje dane do odpowiednich pól w tabeli.
+     */
     private void czytanieKsiazek() {
         list.clear();
         DatabaseControll odczyt = DatabaseControll.getInstance();
@@ -86,6 +93,9 @@ public class TabelaKsiazek implements Initializable {
         tabelaKsiazka.setItems(list);
     }
 
+    /**
+     * Inicjalizacja wszystkich kolumn odpowiednimi wartościami z bazy.
+     */
     private void initKsiaz() {
         idTab.setCellValueFactory(new PropertyValueFactory<>("id"));
         tytulTab.setCellValueFactory(new PropertyValueFactory<>("tytul"));
@@ -137,7 +147,11 @@ public class TabelaKsiazek implements Initializable {
         }
     }
 
-
+    /**
+     * Metoda przypisana do przycisku Anuluj.
+     * Po naciśnięciu przycisku okno z edycją jest ukrywane i zostaje wyświetlona tabela książek.
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     public void anuluj(ActionEvent event) {
         tabelaKsiazka.setVisible(true);
@@ -145,7 +159,14 @@ public class TabelaKsiazek implements Initializable {
         edytowanie.setVisible(false);
     }
 
-
+    /**
+     * Metoda przypisana do przycisku Aktualizuj
+     * Metoda ta pobiera wszystkie dane z pól TextField, następnie pobrane dane są ładowane do zapytania SQL
+     * I wykonywane. Jeśli akcja aktualizacji się powiedzie zostanie wyświetlony odpowiedni komunikat.
+     * Sytuacja będzie podobna podczas niepowodzenia operacji. Wyskoczy użytkownikowi Error.
+     *
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     public void aktualizuj(ActionEvent event) {
         String tytulp = tytul.getText();
@@ -191,12 +212,19 @@ public class TabelaKsiazek implements Initializable {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Niepowodzenie");
             alert.setHeaderText("Edycja Książki");
-            alert.setContentText("Wypożyczonych książek nie możesz edytować");
+            alert.setContentText("Wypożyczonych książek nie możesz edytować.");
             alert.showAndWait();
         }
     }
 
-
+    /**
+     * Metoda przypisana do przycisku Edytuj.
+     * Po naciśnięciu przycisku okno z tabelą książek zostaje ukryte i pokazuje się okno edycji.
+     * Zostają pobierane informacje o zaznaczonej książce do edycji.
+     * Po wprowadzeniu zmian wyskoczy komunikat z potwierdzeniem wprowawdzenia zmian.
+     * W innym przypadku wyskoczy Error.
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     public void edytowanie(ActionEvent event) {
         ksiazki wybieranieDoUsuwania = tabelaKsiazka.getSelectionModel().getSelectedItem();
@@ -217,12 +245,18 @@ public class TabelaKsiazek implements Initializable {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Niepowodzenie");
                 alert.setHeaderText("Edycja Książki");
-                alert.setContentText("Wypożyczonych książek nie możesz edytować");
+                alert.setContentText("Książka jest wypożyczona. Nie możesz jej edytować.");
                 alert.showAndWait();
             }
         }
     }
 
+    /**
+     * Metoda przypisana do przycisku Usuń.
+     * Po naciśnięciu w ten przycisk wyskakuje komunikat, czy na pewno chcesz usunąć książkę.
+     * Jeśli naciśniemy 'tak' wszystkie dane o zaznaczonej książce zostaną usunięte.
+     * @param event Jest to parametr, określający, że jest tu wykorzystywana akcja przycisku
+     */
     @FXML
     void usuwanie(ActionEvent event) {
         ksiazki wybieranieDoEdytowania = tabelaKsiazka.getSelectionModel().getSelectedItem();
