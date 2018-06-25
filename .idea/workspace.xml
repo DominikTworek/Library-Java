@@ -5,50 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/derbyrun.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_mail.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Library Project.iml" afterPath="$PROJECT_DIR$/Library Project.iml" />
       <change beforePath="$PROJECT_DIR$/bazadanych/db.lck" afterPath="$PROJECT_DIR$/bazadanych/db.lck" />
-      <change beforePath="$PROJECT_DIR$/bazadanych/log/log.ctrl" afterPath="$PROJECT_DIR$/bazadanych/log/log.ctrl" />
       <change beforePath="$PROJECT_DIR$/bazadanych/log/log1.dat" afterPath="$PROJECT_DIR$/bazadanych/log/log1.dat" />
-      <change beforePath="$PROJECT_DIR$/bazadanych/log/logmirror.ctrl" afterPath="$PROJECT_DIR$/bazadanych/log/logmirror.ctrl" />
-      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c490.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c490.dat" />
-      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c4b0.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c4b0.dat" />
-      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c4d0.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c4d0.dat" />
-      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c4e1.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c4e1.dat" />
-      <change beforePath="$PROJECT_DIR$/bazadanych/seg0/c4f1.dat" afterPath="$PROJECT_DIR$/bazadanych/seg0/c4f1.dat" />
       <change beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno$1.class" afterPath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno.class" afterPath="$PROJECT_DIR$/out/production/Library Project/Glowne/GlowneOkno.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/bazadanych/DatabaseControll.class" afterPath="$PROJECT_DIR$/out/production/Library Project/bazadanych/DatabaseControll.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/dodawanieKsiazki/nowaksiazka.class" afterPath="$PROJECT_DIR$/out/production/Library Project/dodawanieKsiazki/nowaksiazka.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/logowanie/LogowanieOkno.class" afterPath="$PROJECT_DIR$/out/production/Library Project/logowanie/LogowanieOkno.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/narzedzia/Narzedzia$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/narzedzia/Narzedzia.class" afterPath="$PROJECT_DIR$/out/production/Library Project/narzedzia/Narzedzia.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/rejestracja/LoaderNowyUzytkownik.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/rejestracja/nowyuzytkownik.class" afterPath="$PROJECT_DIR$/out/production/Library Project/rejestracja/nowyuzytkownik.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/tabelaKsiazek/LoaderTabelaKsiazki.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/tabelaKsiazek/TabelaKsiazek$ksiazki.class" afterPath="$PROJECT_DIR$/out/production/Library Project/tabelaKsiazek/TabelaKsiazek$ksiazki.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/tabelaKsiazek/TabelaKsiazek.class" afterPath="$PROJECT_DIR$/out/production/Library Project/tabelaKsiazek/TabelaKsiazek.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/tabelaKsiazek/wygladTabeli.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow$uzytkownicy.class" afterPath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow$uzytkownicy.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow.class" afterPath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow.fxml" afterPath="$PROJECT_DIR$/out/production/Library Project/tabelaUzytkownikow/TabelaUzytkownikow.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/Glowne/GlowneOkno.java" afterPath="$PROJECT_DIR$/src/Glowne/GlowneOkno.java" />
-      <change beforePath="$PROJECT_DIR$/src/bazadanych/DatabaseControll.java" afterPath="$PROJECT_DIR$/src/bazadanych/DatabaseControll.java" />
-      <change beforePath="$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.java" afterPath="$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.java" />
-      <change beforePath="$PROJECT_DIR$/src/logowanie/LogowanieOkno.java" afterPath="$PROJECT_DIR$/src/logowanie/LogowanieOkno.java" />
-      <change beforePath="$PROJECT_DIR$/src/narzedzia/Narzedzia.java" afterPath="$PROJECT_DIR$/src/narzedzia/Narzedzia.java" />
-      <change beforePath="$PROJECT_DIR$/src/narzedzia/narzedzia.fxml" afterPath="$PROJECT_DIR$/src/narzedzia/narzedzia.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/rejestracja/LoaderNowyUzytkownik.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java" afterPath="$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java" />
-      <change beforePath="$PROJECT_DIR$/src/tabelaKsiazek/LoaderTabelaKsiazki.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/tabelaKsiazek/TabelaKsiazek.java" afterPath="$PROJECT_DIR$/src/tabelaKsiazek/TabelaKsiazek.java" />
-      <change beforePath="$PROJECT_DIR$/src/tabelaKsiazek/wygladTabeli.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.fxml" afterPath="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.java" afterPath="$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,7 +88,7 @@
       <file leaf-file-name="LogowanieOkno.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logowanie/LogowanieOkno.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
+            <state relative-caret-position="544">
               <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -140,7 +100,7 @@
       <file leaf-file-name="GlowneOkno.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Glowne/GlowneOkno.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
+            <state relative-caret-position="2176">
               <caret line="274" column="5" lean-forward="false" selection-start-line="274" selection-start-column="5" selection-end-line="274" selection-end-column="5" />
               <folding>
                 <element signature="method#initialize#0;class#GlowneOkno#0" expanded="false" />
@@ -163,7 +123,7 @@
       <file leaf-file-name="NowyUzytkownik.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-43">
+            <state relative-caret-position="17">
               <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="51" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -185,8 +145,8 @@
       <file leaf-file-name="Narzedzia.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/narzedzia/Narzedzia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#970#971#0" expanded="true" />
@@ -326,8 +286,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -385,8 +343,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -752,12 +712,13 @@
       <workItem from="1528294405960" duration="1658000" />
       <workItem from="1528793099839" duration="820000" />
       <workItem from="1529686268572" duration="1142000" />
-      <workItem from="1529832973647" duration="14206000" />
+      <workItem from="1529832973647" duration="14889000" />
+      <workItem from="1529952979722" duration="607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188533000" />
+    <option name="totallyTimeSpent" value="189823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="-8" width="1297" height="784" extended-state="7" />
@@ -771,21 +732,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28315946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28315946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17954724" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943013" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -796,6 +756,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -907,40 +868,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rejestracja/rejestracja.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="150" lean-forward="false" selection-start-line="42" selection-start-column="150" selection-end-line="42" selection-end-column="187" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rejestracja/LoaderNowyUzytkownik.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="40" />
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tabelaKsiazek/LoaderTabelaKsiazki.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rejestracja/LoaderNowyUzytkownik.java" />
+    <entry file="file://$PROJECT_DIR$/src/tabelaKsiazek/LoaderTabelaKsiazki.java" />
     <entry file="file://$PROJECT_DIR$/src/edycjaKsiazki/test.java" />
     <entry file="file://$PROJECT_DIR$/src/edycjaKsiazki/edycjaKsiazki.java" />
     <entry file="file://$PROJECT_DIR$/src/edycjaKsiazki/edycjaKsiazki.fxml" />
     <entry file="file://$PROJECT_DIR$/src/tabelaKsiazek/tabelaKsiazek.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="73" column="25" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="73" selection-end-column="25" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wyglad/user.png">
@@ -949,13 +898,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/nowaksiazka.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/dodajksiazke.css">
@@ -966,44 +915,44 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tabelaUzytkownikow/tabelaUzytkownikow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="74" column="82" lean-forward="false" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="82" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logowanie/logowanieOkno.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logowanie/logowanieOkno.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="41" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Glowne/Vbox.java" />
-    <entry file="file://$PROJECT_DIR$/src/Glowne/GlowneOkno.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Glowne/Vbox.java" />
+    <entry file="file://$PROJECT_DIR$/src/Glowne/GlowneOkno.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
           <caret line="88" column="61" lean-forward="false" selection-start-line="88" selection-start-column="61" selection-end-line="88" selection-end-column="61" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/narzedzia/narzedzia.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/narzedzia/narzedzia.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="38" column="119" lean-forward="false" selection-start-line="38" selection-start-column="119" selection-end-line="38" selection-end-column="119" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dodawanieKsiazki/Main.java">
@@ -1018,7 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,7 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,35 +981,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tabelaKsiazek/wygladTabeli.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tabelaKsiazek/wygladTabeli.css" />
     <entry file="file://$PROJECT_DIR$/src/tabelaUzytkownikow/TabelaUzytkownikow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1444">
           <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="184" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5117#5118#0" expanded="false" />
-            <element signature="e#5158#5159#0" expanded="false" />
-            <element signature="e#5197#5198#0" expanded="false" />
-            <element signature="e#5242#5243#0" expanded="false" />
-            <element signature="e#5336#5337#0" expanded="false" />
-            <element signature="e#5378#5379#0" expanded="false" />
-            <element signature="e#5414#5415#0" expanded="false" />
-            <element signature="e#5456#5457#0" expanded="false" />
-            <element signature="e#5549#5550#0" expanded="false" />
-            <element signature="e#5590#5591#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1078,7 +1004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1112,8 +1037,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/narzedzia/Narzedzia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#970#971#0" expanded="true" />
@@ -1124,7 +1049,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logowanie/LogowanieOkno.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
+        <state relative-caret-position="544">
           <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1134,7 +1059,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Glowne/GlowneOkno.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
+        <state relative-caret-position="2176">
           <caret line="274" column="5" lean-forward="false" selection-start-line="274" selection-start-column="5" selection-end-line="274" selection-end-column="5" />
           <folding>
             <element signature="method#initialize#0;class#GlowneOkno#0" expanded="false" />
@@ -1155,7 +1080,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rejestracja/NowyUzytkownik.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43">
+        <state relative-caret-position="17">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="51" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
